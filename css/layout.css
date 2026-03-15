@@ -1,0 +1,281 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  gap: 1rem;
+}
+
+.hero,
+.section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.hero > .container,
+.section > .container {
+  width: min(calc(100% - 3rem), var(--max));
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.section {
+  scroll-margin-top: var(--nav-height);
+}
+
+.section-shell {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section-head {
+  max-width: 760px;
+}
+
+.section:last-of-type {
+  min-height: auto;
+}
+
+.contact-box {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+#contact .section-shell {
+  max-width: 1000px;
+}
+
+/* tablet + mobile */
+@media (max-width: 980px) {
+  .hero,
+  .section {
+    min-height: auto;
+    padding: 0;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+
+  .hero > .container,
+  .section > .container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+  }
+
+  .hero-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .section-shell {
+    max-width: 100%;
+  }
+
+  #contact,
+  .section:last-of-type {
+    min-height: auto;
+  }
+
+  #contact > .container {
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .hero-text {
+    display: contents;
+  }
+
+  .eyebrow,
+  .hero h1,
+  .hero-subtitle,
+  .hero-text > p {
+    order: 1;
+  }
+
+  .hero-card {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .hero-actions {
+    order: 3;
+    margin-top: 0;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+  }
+}
+
+/* phone */
+/* tablet + mobile */
+@media (max-width: 980px) {
+  .hero,
+  .section {
+    min-height: auto;
+    padding: 0;
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+  }
+
+  .hero > .container,
+  .section > .container {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+  }
+
+  .hero-grid,
+  .contact-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .section-shell {
+    max-width: 100%;
+  }
+
+  #contact,
+  .section:last-of-type {
+    min-height: auto;
+  }
+
+  #contact > .container {
+    padding-bottom: 0.5rem;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  .hero-text {
+    display: contents;
+  }
+
+  .eyebrow,
+  .hero h1,
+  .hero-subtitle,
+  .hero-text > p {
+    order: 1;
+  }
+
+  .hero-card {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0 0.75rem;
+  }
+
+  .hero-actions {
+    order: 3;
+    margin-top: 0;
+  }
+
+  .portrait {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4 / 3;
+    margin: 0 auto;
+  }
+}
+
+/* phone */
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.9rem 0;
+  }
+
+  .hero {
+    padding-top: 12rem;
+  }
+
+  .section {
+    padding-top: 1rem;
+  }
+
+  .hero > .container,
+  .section > .container {
+    width: min(calc(100% - 2rem), var(--max));
+    padding-top: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-grid {
+    gap: 1.25rem;
+  }
+
+  .hero-card {
+    margin: 0.25rem 0 0.75rem;
+  }
+
+  .portrait {
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+
+  .contact-box {
+    gap: 1.25rem;
+  }
+
+  #contact > .container {
+    padding-bottom: 0.25rem;
+  }
+}
+

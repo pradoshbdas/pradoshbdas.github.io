@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pradosh Barun Das</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/buttons.css" />
+  <link rel="stylesheet" href="css/cards.css" />
+  <link rel="stylesheet" href="css/research.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
+  <link rel="stylesheet" href="css/markdown.css" />
+  <link rel="stylesheet" href="css/theme-toggle.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+  />
+</head>
+
+<body>
+  <div data-include="partials/nav.html"></div>
+
+  <main id="main-content">
+    <div data-include="partials/hero/hero.html"></div>
+    <div data-include="pages/about-section.html"></div>
+    <div data-include="pages/research-section.html"></div>
+    <div data-include="pages/conferences-section.html"></div>
+    <div data-include="pages/awards-section.html"></div>
+    <div data-include="pages/publications-section.html"></div>
+    <div data-include="pages/gallery-section.html"></div>
+    <div data-include="pages/outreach-section.html"></div>
+    <div data-include="pages/contact-section.html"></div>
+    <div data-include="partials/footer.html"></div>
+  </main>
+
+  <script src="/js/hero-animation.js"></script>
+  <script src="/js/nav-behavior.js"></script>
+  <script src="/js/markdown-loader.js"></script>
+  <script src="/js/theme-toggle.js"></script>
+  <script src="/js/partial-loader.js"></script>
+  <script src="js/gallery.js"></script>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const section = params.get("section");
+
+      if (section) {
+        setTimeout(() => {
+          const el = document.getElementById(section);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 200);
+      }
+    });
+  </script>
+</body>
+</html>

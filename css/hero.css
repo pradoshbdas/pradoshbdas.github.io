@@ -1,0 +1,235 @@
+.eyebrow {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #8b9099;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  max-width: 12ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.section-head p,
+.hero p,
+.muted {
+  color: var(--muted);
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero-text p {
+  max-width: 620px;
+  font-size: 1.1rem;
+}
+
+#changing-word {
+  display: inline-block;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.word-hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.word-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 920px) {
+  .hero-subtitle {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+}
+
+/* ================================
+   PREMIUM HERO ENTRY ANIMATIONS
+================================ */
+
+.hero-item,
+.hero-reveal-left,
+.hero-reveal-photo,
+.hero-name-line {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+  margin: 0;
+}
+
+.hero-name-line {
+  display: block;
+}
+
+.hero-loaded .hero-reveal-left {
+  animation: heroSlideInLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-loaded .hero-item {
+  animation: heroSlideInLeftSoft 0.82s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-loaded .hero-name-line {
+  animation: heroNameLineReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* photo now only fades in */
+.hero-loaded .hero-reveal-photo {
+  animation: heroPhotoFadeOnly 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-delay-1 { animation-delay: 0.08s !important; }
+.hero-delay-2 { animation-delay: 0.20s !important; }
+.hero-delay-3 { animation-delay: 0.34s !important; }
+.hero-delay-4 { animation-delay: 0.48s !important; }
+.hero-delay-5 { animation-delay: 0.60s !important; }
+.hero-delay-6 { animation-delay: 0.76s !important; }
+
+@keyframes heroSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroSlideInLeftSoft {
+  from {
+    opacity: 0;
+    transform: translateX(-34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroNameLineReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-44px) translateY(10px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes heroPhotoFadeOnly {
+  from {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* ================================
+   PHOTO BORDER STREAK
+================================ */
+
+.portrait-streak {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.portrait-streak::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  padding: 3px;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(255, 255, 255, 0.05) 44%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(120, 119, 255, 0.9) 53%,
+    rgba(255, 255, 255, 0.08) 60%,
+    transparent 68%,
+    transparent 100%
+  );
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  transform: translateX(-145%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-loaded .portrait-streak::before {
+  animation: portraitBorderStreak 1.5s ease 0.95s forwards;
+}
+
+@keyframes portraitBorderStreak {
+  0% {
+    transform: translateX(-145%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(145%);
+    opacity: 0;
+  }
+}

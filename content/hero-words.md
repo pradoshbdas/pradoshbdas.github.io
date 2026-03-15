@@ -1,0 +1,5 @@
+- Science Enthusiast
+- Astronomy Lover
+- Amazing Guitarist
+- Knowledge Seeker
+- Research Thinker
