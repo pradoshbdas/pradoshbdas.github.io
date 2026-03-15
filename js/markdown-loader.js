@@ -26,3 +26,12 @@ async function loadMarkdownSections(root = document) {
 }
 
 window.loadMarkdownSections = loadMarkdownSections;
+
+function hideLoader() {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    loader.classList.add("hide");
+  }
+}
+
+window.addEventListener("load", hideLoader);
