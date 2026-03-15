@@ -79,18 +79,29 @@ const astroFacts = [
 ];
 
 const factEl = document.getElementById("astro-fact-text");
+
 let factIndex = 0;
 
 function rotateFact(){
-  if(!factEl) return;
-  factEl.textContent = astroFacts[factIndex];
-  factIndex = (factIndex + 1) % astroFacts.length;
+
+  factEl.classList.add("fade-out");
+
+  setTimeout(() => {
+
+    factEl.textContent = astroFacts[factIndex];
+
+    factIndex = (factIndex + 1) % astroFacts.length;
+
+    factEl.classList.remove("fade-out");
+
+  }, 600);
+
 }
 
-rotateFact();
-setInterval(rotateFact, 3500);
-</script>
+factEl.textContent = astroFacts[0];
 
+setInterval(rotateFact, 4000);
+</script>
 <script>
 const canvas = document.getElementById("galaxy-loader");
 const ctx = canvas.getContext("2d");
