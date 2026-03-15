@@ -20,7 +20,6 @@ async function loadPartials(root = document) {
 
       target.replaceWith(...insertedNodes);
 
-      // recursively load nested partials inside newly inserted content
       for (const node of insertedNodes) {
         if (node.nodeType === 1) {
           await loadPartials(node);
@@ -32,33 +31,67 @@ async function loadPartials(root = document) {
       errorDiv.style.padding = "1rem";
       errorDiv.innerHTML = `Could not load <code>${file}</code>`;
       target.replaceWith(errorDiv);
+
       console.error("Partial load error:", error);
     }
   }
 }
 
-function hideLoader() {
+function revealFallback() {
   const loader = document.getElementById("page-loader");
-  if (loader) {
-    loader.classList.add("hide");
+  const flash = document.getElementById("white-flash");
+
+  if (window.stopAstroFacts) {
+    window.stopAstroFacts();
   }
-  document.body.classList.remove("loading");
+
+  if (flash) {
+    flash.classList.add("active");
+  }
+
+  setTimeout(() => {
+    if (loader) {
+      loader.classList.add("hide");
+    }
+
+    document.body.classList.remove("loading");
+    document.body.classList.add("page-ready");
+  }, 150);
+
+  setTimeout(async () => {
+    if (flash) {
+      flash.classList.remove("active");
+    }
+
+    if (window.startHeroAnimation) {
+      await window.startHeroAnimation();
+    }
+
+    if (window.initHeroReplayOnView) {
+      window.initHeroReplayOnView();
+    }
+  }, 300);
+}
+
+function triggerLoaderExit() {
+  if (typeof window.startSunZoom === "function") {
+    window.startSunZoom();
+  } else {
+    revealFallback();
+  }
+
   window.dispatchEvent(new Event("site:ready"));
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  if (window.startAstroFacts) {
+    window.startAstroFacts();
+  }
+
   await loadPartials();
 
   if (window.loadMarkdownSections) {
     await window.loadMarkdownSections(document);
-  }
-
-  if (window.startHeroAnimation) {
-    await window.startHeroAnimation();
-  }
-
-  if (window.initHeroReplayOnView) {
-    window.initHeroReplayOnView();
   }
 
   if (window.initNavBehavior) {
@@ -69,12 +102,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.initThemeToggle();
   }
 
-  // let DOM paint and layout settle before revealing page
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       setTimeout(() => {
-        hideLoader();
-        scrollToRequestedSection();
+        triggerLoaderExit();
+
+        if (typeof scrollToRequestedSection === "function") {
+          scrollToRequestedSection();
+        }
       }, 200);
     });
   });

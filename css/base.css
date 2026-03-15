@@ -90,7 +90,7 @@ main {
   overflow-y: auto;
   scroll-snap-type: y proximity;
   scroll-padding-top: var(--nav-height);
-  padding-bottom: 1rem;
+  padding-bottom: 4rem;
 }
 
 @media (max-width: 980px) {
