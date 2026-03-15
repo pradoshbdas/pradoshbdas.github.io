@@ -12,9 +12,7 @@ if (canvas && flash && pageLoader) {
 
   let zooming = false;
   let finished = false;
-
-  const baseSunRadius = 16;
-  let sunRadius = baseSunRadius;
+  let sunRadius = 16;
 
   const planets = [
     { r: 42, size: 3, speed: 0.03, angle: 0.2, color: "#b7bcc5" },
@@ -32,7 +30,6 @@ if (canvas && flash && pageLoader) {
 
     canvas.width = Math.round(width * dpr);
     canvas.height = Math.round(height * dpr);
-
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
 
@@ -66,9 +63,7 @@ if (canvas && flash && pageLoader) {
     drawStars();
 
     planets.forEach((p) => {
-      if (!zooming) {
-        p.angle += p.speed;
-      }
+      if (!zooming) p.angle += p.speed;
 
       ctx.beginPath();
       ctx.arc(cx, cy, p.r, 0, Math.PI * 2);
@@ -96,6 +91,11 @@ if (canvas && flash && pageLoader) {
     ctx.shadowBlur = 0;
 
     if (zooming) {
+      const overlay = document.querySelector(".loader-overlay");
+      if (overlay) {
+        overlay.style.opacity = "0";
+      }
+
       sunRadius *= 1.12;
 
       const screenCoverRadius = Math.hypot(width, height);
@@ -138,11 +138,25 @@ if (canvas && flash && pageLoader) {
 
   resizeCanvas();
   window.addEventListener("resize", resizeCanvas);
-
   drawSolarSystem();
 
   window.startSunZoom = function startSunZoom() {
     if (zooming || finished) return;
-    zooming = true;
+
+    // stop rotating facts
+    if (window.stopAstroFacts) {
+      window.stopAstroFacts();
+    }
+
+    // immediately remove fact overlay
+    const overlay = document.querySelector(".loader-overlay");
+    if (overlay) {
+      overlay.style.display = "none";
+    }
+
+    // start zoom almost immediately
+    setTimeout(() => {
+      zooming = true;
+    }, 50);
   };
 }

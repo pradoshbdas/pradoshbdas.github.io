@@ -1,14 +1,16 @@
 (function () {
   const astroFacts = [
-    "If the Sun suddenly disappeared, Earth wouldn’t notice for ~8 minutes and 20 seconds.",
-    "The Milky Way will collide with the Andromeda Galaxy in about 4–5 billion years, creating a new giant galaxy.",
-    "The TON 618 is a black hole so massive that it contains the mass of about 66 billion Suns.",
-    "The Great Attractor is a mysterious gravitational region so massive that it is pulling our entire galaxy cluster toward it at about 2 million km/h.",
-    "The largest known star, UY Scuti, is so huge that about 5 billion Suns could fit inside it.",
-    "The Phoenix Cluster creates stars at an insane rate of about 1,000 stars every year.",
-    "The Bootes Void is an enormous region of space about 330 million light-years wide that contains almost nothing at all.",
+    "If the Sun suddenly disappeared, Earth wouldn’t notice for about 8 minutes and 20 seconds.",
+    "The Milky Way will collide with the Andromeda Galaxy in about 4 to 5 billion years.",
+    "TON 618 is so massive that it contains the mass of about 66 billion Suns.",
+    "The Great Attractor is pulling our galaxy cluster at roughly 2 million km/h.",
+    "UY Scuti is so huge that about 5 billion Suns could fit inside it.",
+    "The Phoenix Cluster creates stars at a rate of about 1,000 stars every year.",
+    "The Bootes Void is about 330 million light-years wide and contains almost nothing.",
     "Light from the Andromeda Galaxy takes 2.5 million years to reach Earth.",
-    "The Saturn is so low-density that it would float if you had an ocean big enough.",
+    "Saturn is so low-density that it would float in a large enough ocean.",
+    "A teaspoon of neutron star matter would weigh about a billion tons.",
+    "The James Webb Space Telescope observes galaxies from over 13 billion years ago.",
     "Some exoplanets rain molten glass sideways at 7000 km/h."
   ];
 
@@ -21,7 +23,6 @@
 
   function randomFactIndex() {
     let index;
-
     do {
       index = Math.floor(Math.random() * astroFacts.length);
     } while (index === lastFact && astroFacts.length > 1);
@@ -30,7 +31,7 @@
     return index;
   }
 
-  function showNextFact() {
+  function rotateFact() {
     factEl.classList.add("fade-out");
 
     timeoutId = setTimeout(() => {
@@ -41,11 +42,9 @@
 
   function startAstroFacts() {
     if (intervalId) return;
-
     factEl.textContent = astroFacts[randomFactIndex()];
     factEl.classList.remove("fade-out");
-
-    intervalId = setInterval(showNextFact, 3500);
+    intervalId = setInterval(rotateFact, 4500);
   }
 
   function stopAstroFacts() {
@@ -53,13 +52,18 @@
       clearInterval(intervalId);
       intervalId = null;
     }
-
     if (timeoutId) {
       clearTimeout(timeoutId);
       timeoutId = null;
     }
   }
 
+  function hideAstroFacts() {
+    stopAstroFacts();
+    factEl.classList.add("fade-out");
+  }
+
   window.startAstroFacts = startAstroFacts;
   window.stopAstroFacts = stopAstroFacts;
+  window.hideAstroFacts = hideAstroFacts;
 })();

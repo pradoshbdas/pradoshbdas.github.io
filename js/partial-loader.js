@@ -17,7 +17,6 @@ async function loadPartials(root = document) {
       wrapper.innerHTML = html.trim();
 
       const insertedNodes = Array.from(wrapper.childNodes);
-
       target.replaceWith(...insertedNodes);
 
       for (const node of insertedNodes) {
@@ -31,7 +30,6 @@ async function loadPartials(root = document) {
       errorDiv.style.padding = "1rem";
       errorDiv.innerHTML = `Could not load <code>${file}</code>`;
       target.replaceWith(errorDiv);
-
       console.error("Partial load error:", error);
     }
   }
@@ -41,8 +39,8 @@ function revealFallback() {
   const loader = document.getElementById("page-loader");
   const flash = document.getElementById("white-flash");
 
-  if (window.stopAstroFacts) {
-    window.stopAstroFacts();
+  if (window.hideAstroFacts) {
+    window.hideAstroFacts();
   }
 
   if (flash) {
@@ -50,18 +48,13 @@ function revealFallback() {
   }
 
   setTimeout(() => {
-    if (loader) {
-      loader.classList.add("hide");
-    }
-
+    if (loader) loader.classList.add("hide");
     document.body.classList.remove("loading");
     document.body.classList.add("page-ready");
-  }, 150);
+  }, 200);
 
   setTimeout(async () => {
-    if (flash) {
-      flash.classList.remove("active");
-    }
+    if (flash) flash.classList.remove("active");
 
     if (window.startHeroAnimation) {
       await window.startHeroAnimation();
@@ -70,7 +63,7 @@ function revealFallback() {
     if (window.initHeroReplayOnView) {
       window.initHeroReplayOnView();
     }
-  }, 300);
+  }, 350);
 }
 
 function triggerLoaderExit() {
@@ -102,6 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.initThemeToggle();
   }
 
+  // Wait for layout + paint to settle before transition
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -110,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (typeof scrollToRequestedSection === "function") {
           scrollToRequestedSection();
         }
-      }, 200);
+      }, 250);
     });
   });
 });
