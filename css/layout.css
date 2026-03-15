@@ -38,13 +38,26 @@
 }
 
 .hero-grid {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 3rem;
   align-items: center;
+}
+
+.hero-text {
+  min-width: 0;
+  max-width: 620px;
+}
+
+.hero-card {
+  width: 100%;
+  max-width: 360px;
+  justify-self: end;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 360px;
 }
 
 .section {
@@ -126,7 +139,8 @@
   }
 
   .hero-text {
-    display: contents;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .eyebrow,
@@ -138,87 +152,11 @@
 
   .hero-card {
     order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0 0.75rem;
-  }
-
-  .hero-actions {
-    order: 3;
-    margin-top: 0;
-  }
-
-  .portrait {
     width: 100%;
     max-width: 380px;
-    aspect-ratio: 4 / 3;
-    margin: 0 auto;
-  }
-}
-
-/* phone */
-/* tablet + mobile */
-@media (max-width: 980px) {
-  .hero,
-  .section {
-    min-height: auto;
-    padding: 0;
-    scroll-snap-align: none;
-    scroll-snap-stop: normal;
-  }
-
-  .hero > .container,
-  .section > .container {
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    justify-content: flex-start;
-  }
-
-  .hero-grid,
-  .contact-box {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 100%;
-  }
-
-  .section-shell {
-    max-width: 100%;
-  }
-
-  #contact,
-  .section:last-of-type {
-    min-height: auto;
-  }
-
-  #contact > .container {
-    padding-bottom: 0.5rem;
-  }
-
-  .hero-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.5rem;
-  }
-
-  .hero-text {
-    display: contents;
-  }
-
-  .eyebrow,
-  .hero h1,
-  .hero-subtitle,
-  .hero-text > p {
-    order: 1;
-  }
-
-  .hero-card {
-    order: 2;
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0.5rem 0 0.75rem;
+    margin: 0.5rem auto 0.75rem;
   }
 
   .hero-actions {
@@ -262,7 +200,8 @@
   }
 
   .hero-card {
-    margin: 0.25rem 0 0.75rem;
+    max-width: 100%;
+    margin: 0.25rem auto 0.75rem;
   }
 
   .portrait {
@@ -278,4 +217,3 @@
     padding-bottom: 0.25rem;
   }
 }
-

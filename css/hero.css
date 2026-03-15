@@ -44,10 +44,6 @@ h2 {
   color: var(--muted);
 }
 
-.hero-text {
-  max-width: 700px;
-}
-
 .hero-text p {
   max-width: 620px;
   font-size: 1.1rem;
@@ -81,15 +77,15 @@ h2 {
   }
 
   .hero-subtitle {
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-  color: #8b9099;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  max-width: 12ch;
-  min-height: 2.3em; /* prevents layout jump */
-}
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    color: #8b9099;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    max-width: 12ch;
+    min-height: 2.3em;
+  }
 }
 
 /* ================================
@@ -105,14 +101,13 @@ h2 {
 }
 
 .hero-name {
-  display: flex;
-  flex-direction: column;
-  gap: 0.05em;
+  display: inline-block;
+  white-space: nowrap;
   margin: 0;
 }
 
 .hero-name-line {
-  display: block;
+  display: inline;
 }
 
 .hero-loaded .hero-reveal-left {
@@ -127,7 +122,6 @@ h2 {
   animation: heroNameLineReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* photo now only fades in */
 .hero-loaded .hero-reveal-photo {
   animation: heroPhotoFadeOnly 1.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
@@ -224,6 +218,12 @@ h2 {
 
 .hero-loaded .portrait-streak::before {
   animation: portraitBorderStreak 1.5s ease 0.95s forwards;
+}
+
+.portrait img{
+  width:100%;
+  height:auto;
+  object-fit:cover;
 }
 
 @keyframes portraitBorderStreak {
