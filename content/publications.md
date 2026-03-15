@@ -8,10 +8,10 @@
 
 - Das, P. B., Armstrong, J., & Tan, J. (2023). The structure and kinematics of the newborn stars of Upper Scorpius. Bulletin of the American Astronomical Society, 55(2), AAS241. [2023AAS…24133406D](https://ui.adsabs.harvard.edu/abs/2023AAS...24133406D)
 
-
-## Upcoming
-- Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., Ness, M., & Worley, C.C. (2026). Barium and Europium abundances from the Gaia-ESO Survey Using The Cannon [To be submitted to A&A]
-
 - Das, P. B., & Roy, J. Characterizing Fast Radio Bursts: Repeater vs Non-Repeater Properties and Telescope Biases [NCRA–VSRP Fellowship Research Fellowship]
 
 - Das, P. B., & Goswami, A. Understanding the Spectral Characteristics of CEMP Star BD-19132, using High-Resolution Spectroscopy [IASc-INSA-NASI Fellowship Research]
+
+  
+## Upcoming
+- Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., Ness, M., & Worley, C.C. (2026). Barium and Europium abundances from the Gaia-ESO Survey Using The Cannon [To be submitted to A&A]
