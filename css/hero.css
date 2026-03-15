@@ -79,8 +79,15 @@ h2 {
   }
 
   .hero-subtitle {
-    font-size: 2rem;
-  }
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  color: #8b9099;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  max-width: 12ch;
+  min-height: 2.3em; /* prevents layout jump */
+}
 }
 
 /* ================================
