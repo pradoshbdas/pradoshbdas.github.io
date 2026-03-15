@@ -27,6 +27,7 @@ h1 {
   color: #8b9099;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  min-height: 2.3em;
   max-width: 12ch;
 }
 
@@ -53,7 +54,8 @@ h2 {
 }
 
 #changing-word {
-  display: inline;
+  display: inline-block;
+  min-height: 2.2em;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
