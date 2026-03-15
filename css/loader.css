@@ -49,6 +49,10 @@
   animation: loader-slide 1.1s ease-in-out infinite;
 }
 
+body.loading {
+  overflow: hidden;
+}
+
 @keyframes loader-slide {
   0% {
     left: -35%;

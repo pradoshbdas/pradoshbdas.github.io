@@ -37,6 +37,15 @@ async function loadPartials(root = document) {
   }
 }
 
+function hideLoader() {
+  const loader = document.getElementById("page-loader");
+  if (loader) {
+    loader.classList.add("hide");
+  }
+  document.body.classList.remove("loading");
+  window.dispatchEvent(new Event("site:ready"));
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   await loadPartials();
 
@@ -60,7 +69,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.initThemeToggle();
   }
 
-  setTimeout(() => {
-    scrollToRequestedSection();
-  }, 100);
+  // let DOM paint and layout settle before revealing page
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        hideLoader();
+        scrollToRequestedSection();
+      }, 200);
+    });
+  });
 });
