@@ -1,48 +1,44 @@
-- **ESO Early-Career Scientific Research Visit Programme (2025):**
-Selected for a 4‑month research visit at the European Southern Observatory (ESO), Garching, Germany to work
-with Dr. Francesca Primas on Stellar Spectroscopy, Galactic Archaeology and Data‑driven models.
+### Featured
 
-- **Post-Graduate Research Fund (PGRF) Grant, Macquarie University (2025):**
-Awarded a competitive research grant of AUD 6000 by Macquarie University, Sydney, Australia
+- Research Visit | ESO Early-Career Scientific Research Visit Programme | European Southern Observatory | 2025 | 4-month research visit at ESO, Garching, Germany with Dr. Francesca Primas on stellar spectroscopy, galactic archaeology, and data-driven models.
+- Scholarship | International Research Program (RTP) Scholarship | Australian Commonwealth Government | 2023 | Competitive RTP scholarship awarded for PhD studies.
+- Fellowship | Chalmers Astrophysics and Space Sciences Summer Fellowship (CASSUM) | Chalmers University of Technology & University of Virginia | 2022 | Competitive 25,000 SEK summer fellowship to work on young stellar associations.
 
-- **ASA Student Travel Assistance Scheme (ASA-STAS) Grant (2025):**
-Awarded a competitive grant of AUD 1500 by the Astronomical Society of Australia (ASA)
+### 2025
 
-- **Graduate Research Excellence Award, Macquarie University (2025):**
-Nominated for the award by the School of Mathematical and Physical Sciences (MAPS), recognizing excellence
-in academic and research performance
+- Research Visit | ESO Early-Career Scientific Research Visit Programme | European Southern Observatory | 4-month research visit at ESO, Garching, Germany with Dr. Francesca Primas on stellar spectroscopy, galactic archaeology, and data-driven models.
+- Grant | Post-Graduate Research Fund (PGRF) Grant | Macquarie University | Competitive research grant of AUD 6000.
+- Travel Grant | ASA Student Travel Assistance Scheme (ASA-STAS) Grant | Astronomical Society of Australia | Competitive travel grant of AUD 1500.
+- Award Nomination | Graduate Research Excellence Award | Macquarie University | Nominated by the School of Mathematical and Physical Sciences for excellence in academic and research performance.
 
-- **International Research Program (RTP) Scholarship (2023):**
-Awarded the competitive Australian Commonwealth Government funded RTP Scholarship for PhD
+### 2023
 
-- **Chalmers Astrophysics and Space Sciences Summer Fellowship (CASSUM) (2022):**
-Awarded a competitive fellowship of 25,000 SEK jointly by the Chalmers University of Technology, Sweden and
-the University of Virginia, USA to work on Young stellar associations
+- Scholarship | International Research Program (RTP) Scholarship | Australian Commonwealth Government | Competitive RTP scholarship awarded for PhD studies.
 
-- **VSRP Research Fellowship, National Centre for Radio Astrophysics (NCRA) – TIFR (2021):**
-Selected among 4 students nationally in India to work on a research project at the NCRA on Fast Radio Bursts.
-Awarded a scholarship of Rs. 30,000 under the programme
+### 2022
 
-- **IASc–INSA–NASI Summer Research Fellowship (2019):**
-Awarded jointly by the Indian Academy of Sciences (IASc), the Indian National Science Academy (INSA), and
-the National Academy of Sciences (NASI), to conduct research on Carbon‑Enhanced Metal Poor Stars using
-High‑resolution spectroscopy at the Indian Institute of Astrophysics, Bengaluru, India. Scholarship: Rs. 30,000
+- Fellowship | Chalmers Astrophysics and Space Sciences Summer Fellowship (CASSUM) | Chalmers University of Technology & University of Virginia | Competitive 25,000 SEK summer fellowship to work on young stellar associations.
 
-- **NIUS Physics & Astronomy Camp, HBCSE–TIFR (2018):**
-Selected nationally in India on merit‑based to attend Homi Bhabha Centre for Science Education (HBCSE)
-‑ National Undergraduate Physics & Astronomy camp (NIUS) at TIFR, Mumbai, India.
+### 2021
 
-- **DST-INSPIRE Scholarship (2017–2022):**
-Awarded the national undergraduate merit scholarship (INSPIRE) from Department of Science & Technology
-(DST), India. Awarded Rs 360,000 under the Scholarship
+- Fellowship | VSRP Research Fellowship | National Centre for Radio Astrophysics (NCRA) – TIFR | Selected among 4 students nationally in India to work on Fast Radio Bursts. Scholarship amount: Rs. 30,000.
 
-- **International Olympiads & Contests (Mathematics):**
+### 2019
 
-  - **IMO – International Mathematics Olympiad (SOF):**
-    - 2015 – State rank **1 (Gold)**, International rank **23**
-    - 2016 – Zonal rank **9**, International rank **381**
+- Fellowship | IASc–INSA–NASI Summer Research Fellowship | Indian Academy of Sciences, INSA & NASI | Fellowship to conduct research on carbon-enhanced metal poor stars using high-resolution spectroscopy at the Indian Institute of Astrophysics, Bengaluru. Scholarship amount: Rs. 30,000.
 
-  - **IOM – International Olympiad of Mathematics (Silverzone):**
-    - 2015 – State rank **2 (Silver)**, International rank **85**
-    - 2015 – State rank **1 (Gold)**, International rank **25**
-    - 2016 – State rank **1 (Gold)**, International rank **179**
+### 2018
+
+- Academic Selection | NIUS Physics & Astronomy Camp | HBCSE–TIFR | Selected nationally on merit to attend the National Undergraduate Physics & Astronomy camp at TIFR, Mumbai.
+
+### 2017–2022
+
+- Scholarship | DST-INSPIRE Scholarship | Department of Science & Technology, India | National undergraduate merit scholarship. Total support awarded: Rs. 360,000.
+
+### Olympiads & Contests
+
+- Olympiad | IMO – International Mathematics Olympiad (SOF) | 2015 | State Rank 1 (Gold), International Rank 23.
+- Olympiad | IMO – International Mathematics Olympiad (SOF) | 2016 | Zonal Rank 9, International Rank 381.
+- Olympiad | IOM – International Olympiad of Mathematics (Silverzone) | 2015 | State Rank 2 (Silver), International Rank 85.
+- Olympiad | IOM – International Olympiad of Mathematics (Silverzone) | 2015 | State Rank 1 (Gold), International Rank 25.
+- Olympiad | IOM – International Olympiad of Mathematics (Silverzone) | 2016 | State Rank 1 (Gold), International Rank 179.
