@@ -1,4 +1,2 @@
 - Science Enthusiast
-- Astronomy Lover
-- Knowledge Seeker
-- Research Thinker
+- Researcher
