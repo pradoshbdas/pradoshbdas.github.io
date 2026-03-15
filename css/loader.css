@@ -38,6 +38,16 @@
   padding:0 20px;
 }
 
+#astro-fact-text{
+  display:inline-block;
+  opacity:1;
+  transition:opacity .6s ease;
+}
+
+#astro-fact-text.fade-out{
+  opacity:0;
+}
+
 .fact-label{
   display:block;
   color:#94a3b8;
