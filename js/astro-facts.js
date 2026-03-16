@@ -44,7 +44,7 @@
     if (intervalId) return;
     factEl.textContent = astroFacts[randomFactIndex()];
     factEl.classList.remove("fade-out");
-    intervalId = setInterval(rotateFact, 4500);
+    intervalId = setInterval(rotateFact, 3000);
   }
 
   function stopAstroFacts() {
