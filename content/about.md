@@ -10,7 +10,7 @@
 <a href="https://www.mq.edu.au/" target="_blank" rel="noopener">Macquarie University, Sydney, Australia</a>, 
 </p>
 <p>
-Incorporating machine-learning methods (“The Cannon”) to the classify large stellar spectroscopic data such as the “GALAH” (GALactic Archaelogy using HERMES) and the “GAIA-RVS” surveys. This work has resulted in the publication of two massive stellar catalogues – the first contains ~800,000 stars with derived stellar parameters, including effective temperature, surface gravity and rotational velocity, as well as multiple abundances such as α-elements and Fe-peak elements; the second catalogue includes ~350,000 stars with measured neutron-capture elemental abundances. These catalogues provide large, homogeneous datasets that support detailed studies of the chemical composition and evolutionary history of the Milky Way.
+Incorporating machine-learning methods (“The Cannon”) to classify large stellar spectroscopic data such as the “GALAH” (GALactic Archaelogy using HERMES) and the “GAIA-RVS” surveys. This work has resulted in the publication of two large stellar catalogues – the first contains ~800,000 stars with derived stellar parameters, including effective temperature, surface gravity and rotational velocity, as well as multiple abundances such as α-elements and Fe-peak elements; the second catalogue includes ~350,000 stars with measured neutron-capture elemental abundances. These catalogues provide large, homogeneous datasets that support detailed studies of the chemical composition and evolutionary history of the Milky Way.
 </p>
 </div>
 </div>
