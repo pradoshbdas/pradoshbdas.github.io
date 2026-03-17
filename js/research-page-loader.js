@@ -1,78 +1,26 @@
+
+const RESEARCH_CONTENT = {"accretion-structures": "<h2>Accretion Structures</h2>\n<p>Accretion processes occur when matter falls onto compact astrophysical objects such as black holes, neutron stars, or young stars.</p>\n<h3>Research Questions</h3>\n<ul>\n<li>How do accretion disks transport angular momentum?</li>\n<li>What mechanisms trigger accretion outbursts?</li>\n<li>How does magnetic activity affect disk evolution?</li>\n</ul>\n<h3>Physical Processes</h3>\n<ul>\n<li>Magnetohydrodynamics</li>\n<li>Disk turbulence</li>\n<li>Radiative transfer</li>\n</ul>\n<h3>Observational Signatures</h3>\n<p>Accretion structures can be studied through:</p>\n<ul>\n<li>Spectral line profiles</li>\n<li>Variability studies</li>\n<li>Multi-wavelength observations</li>\n</ul>\n<h3>Future Work</h3>\n<p>Developing models that connect theoretical simulations with observational data from modern telescopes.</p>", "chemical-tagging": "<h2>Chemical Tagging</h2>\n<p>Chemical tagging is a technique used to identify groups of stars that formed together in the same molecular cloud by comparing their chemical abundance patterns.</p>\n<h3>Key Idea</h3>\n<p>Stars born in the same stellar nursery share nearly identical chemical compositions.</p>\n<h3>Scientific Importance</h3>\n<p>Chemical tagging helps astronomers:</p>\n<ul>\n<li>Identify disrupted star clusters</li>\n<li>Reconstruct the Milky Way&#x27;s formation history</li>\n<li>Understand galactic chemical evolution</li>\n</ul>\n<h3>Data Requirements</h3>\n<ul>\n<li>High-resolution spectroscopy</li>\n<li>Precise abundance measurements</li>\n</ul>\n<h3>Future Work</h3>\n<p>Combining chemical tagging with Gaia kinematic data to trace stellar migration in the Galactic disk.</p>", "galactic-archaeology": "<h3>Galactic Archaeology</h3>\n<p>Galactic archaeology studies the formation history of galaxies by analyzing the chemical and dynamical properties of stars.</p>\n<h3>Key Questions</h3>\n<ul>\n<li>How did the Milky Way form?</li>\n<li>What are the origins of stellar populations?</li>\n<li>Can we trace ancient merger events?</li>\n</ul>\n<h3>Methods</h3>\n<ul>\n<li>Stellar spectroscopy</li>\n<li>Chemical abundance analysis</li>\n<li>Stellar kinematics</li>\n<li>Large survey data analysis</li>\n</ul>\n<h3>Tools</h3>\n<ul>\n<li>Python</li>\n<li>Astropy</li>\n<li>Machine learning models</li>\n</ul>", "ml-spectroscopy": "<h2>Machine Learning for Stellar Spectroscopy</h2>\n<p>Machine learning techniques are increasingly used to analyze large spectroscopic datasets and extract stellar parameters efficiently.</p>\n<h3>Research Goals</h3>\n<ul>\n<li>Predict stellar temperature, gravity, and metallicity</li>\n<li>Identify unusual stellar spectra</li>\n<li>Automate spectral classification</li>\n</ul>\n<h3>Techniques Used</h3>\n<ul>\n<li>Neural networks</li>\n<li>Random forests</li>\n<li>Dimensionality reduction (PCA, t-SNE)</li>\n</ul>\n<h3>Applications</h3>\n<p>Machine learning models can process millions of stellar spectra from modern surveys and identify patterns that may be difficult to detect with traditional methods.</p>\n<h3>Future Work</h3>\n<p>Developing interpretable machine learning models that link spectral features to physical stellar properties.</p>", "stellar": "<h3>Stellar Spectroscopy</h3>\n<p>My work focuses on analysing stellar spectra to determine:</p>\n<ul>\n<li>chemical abundances</li>\n<li>stellar populations</li>\n<li>galactic evolution</li>\n</ul>\n<h4>Methods</h4>\n<ul>\n<li>high-resolution spectroscopy</li>\n<li>spectral fitting</li>\n<li>machine learning classification</li>\n</ul>\n<h4>Related Publications</h4>\n<p>Example paper 1</p>\n<p>Example paper 2</p>"};
+const RESEARCH_META = {"galactic-archaeology": {"title": "Galactic Archaeology", "subtitle": "Formation history of the Milky Way through stellar populations and chemical evolution."}, "ml-spectroscopy": {"title": "Machine Learning for Stellar Spectroscopy", "subtitle": "Data-driven methods for extracting stellar parameters and abundance information."}, "chemical-tagging": {"title": "Chemical Tagging", "subtitle": "Tracing stellar origins and shared formation environments through abundance patterns."}, "accretion-structures": {"title": "Accretion Structures", "subtitle": "Accretion disks, mass transfer, and compact-object environments."}, "stellar": {"title": "Stellar Spectroscopy", "subtitle": "Spectroscopy, stellar populations, and galactic evolution."}};
 function initResearchPageLoader() {
   const content = document.getElementById("research-content");
   const title = document.getElementById("research-page-title");
   const subtitle = document.getElementById("research-page-subtitle");
-
   if (!content || !title || !subtitle) return;
-
   const params = new URLSearchParams(window.location.search);
   const topic = params.get("topic");
-
-  const topicMeta = {
-    "galactic-archaeology": {
-      title: "Galactic Archaeology",
-      subtitle: "Formation history of the Milky Way through stellar populations and chemical evolution.",
-    },
-    "ml-spectroscopy": {
-      title: "Machine Learning for Stellar Spectroscopy",
-      subtitle: "Data-driven methods for extracting stellar parameters and abundance information.",
-    },
-    "chemical-tagging": {
-      title: "Chemical Tagging",
-      subtitle: "Tracing stellar origins and shared formation environments through abundance patterns.",
-    },
-    "accretion-structures": {
-      title: "Accretion Structures",
-      subtitle: "Accretion disks, mass transfer, and compact-object environments.",
-    },
-  };
-
-  if (!topic) {
+  const selected = RESEARCH_META[topic] || null;
+  if (!topic || !RESEARCH_CONTENT[topic]) {
     title.textContent = "Research";
     subtitle.textContent = "No research topic selected.";
     content.innerHTML = "<p>No research topic selected.</p>";
     return;
   }
-
-  const file = `content/research/${topic}.md`;
-  const meta = topicMeta[topic];
-
-  if (meta) {
-    title.textContent = meta.title;
-    subtitle.textContent = meta.subtitle;
-    document.title = `${meta.title} | Pradosh Barun Das`;
-  } else {
-    title.textContent = "Research";
-    subtitle.textContent = "Loading research topic...";
-  }
-
-  fetch(file)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then((markdown) => {
-      if (typeof marked !== "undefined") {
-        content.innerHTML = marked.parse(markdown);
-      } else {
-        content.textContent = markdown;
-      }
-    })
-    .catch((error) => {
-      content.innerHTML = `
-        <p style="color:#b91c1c;">
-          Could not load <code>${file}</code>.
-        </p>
-      `;
-      console.error("Research page load error:", error);
-    });
+  title.textContent = selected ? selected.title : "Research";
+  subtitle.textContent = selected ? selected.subtitle : "Research topic";
+  document.title = `${title.textContent} | Pradosh Barun Das`;
+  content.innerHTML = RESEARCH_CONTENT[topic];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.initThemeToggle) {
-    window.initThemeToggle();
-  }
   initResearchPageLoader();
 });

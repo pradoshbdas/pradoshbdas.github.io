@@ -4,54 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Research | Pradosh Barun Das</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/markdown.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/theme-toggle.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
-
   <body>
     <main class="research-page">
       <section class="section research-article-section">
         <div class="container">
           <div class="section-shell">
             <div class="research-page-topbar">
-              <a class="back-link" href="index.html?section=research">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back to Research</span>
-              </a>
-
-              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                ☀️
-              </button>
+              <a class="back-link" href="index.html?section=research"><i class="fa-solid fa-arrow-left"></i><span>Back to Research</span></a>
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
             </div>
-
             <div class="section-head">
               <h2 id="research-page-title">Research</h2>
-              <h3 class="muted" id="research-page-subtitle">
-                Loading research topic...
-              </h3>
+              <h3 class="muted" id="research-page-subtitle">Loading research topic...</h3>
             </div>
-
-            <article id="research-content" class="card markdown-body research-article-card">
-              <p>Loading...</p>
-            </article>
+            <article id="research-content" class="card markdown-body research-article-card"><p>Loading...</p></article>
           </div>
         </div>
       </section>
     </main>
-
-    <script src="js/theme-toggle.js"></script>
-    <script src="js/research-page-loader.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/research-page-loader.js"></script>
   </body>
 </html>
