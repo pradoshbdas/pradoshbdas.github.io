@@ -1,0 +1,91 @@
+{
+    "title": "Conferences & Seminars",
+    "intro": "Academic conferences, workshops, and seminars where I presented or participated.",
+    "years": [
+      {
+        "year": "2025",
+        "items": [
+          {
+            "badge": "Seminar Talk",
+            "title": "Max Planck Institute for Astronomy Seminar",
+            "location": "Heidelberg, Germany"
+          },
+          {
+            "badge": "Seminar Talk",
+            "title": "University of Ljubljana – Astrodebata, FMF",
+            "location": "Ljubljana, Slovenia"
+          },
+          {
+            "badge": "ESO-ECR Seminar",
+            "title": "European Southern Observatory, Garching",
+            "location": "Garching, Germany"
+          },
+          {
+            "badge": "Poster + Short Talk",
+            "title": "European Astronomical Society Annual Meeting",
+            "location": "Cork, Ireland"
+          },
+          {
+            "badge": "Contributed Talk",
+            "title": "Astronomical Society of Australia (ASA) Annual Science Meeting",
+            "location": "University of Adelaide, Australia"
+          },
+          {
+            "badge": "Contributed Talk + Poster",
+            "title": "Australian Institute of Physics (AIP) – Macquarie University",
+            "location": "Sydney, Australia"
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "items": [
+          {
+            "badge": "Contributed Talk",
+            "title": "Stars in Brisbane & Australian Exoplanet Workshop X",
+            "location": "University of Southern Queensland, Brisbane, Australia"
+          },
+          {
+            "badge": "Contributed Talk",
+            "title": "Astronomical Society of Australia (ASA) Annual Science Meeting",
+            "location": "CSIRO, Sydney, Australia"
+          },
+          {
+            "badge": "Contributed Talk",
+            "title": "ASTRO 3D Science Legacy Meeting",
+            "location": "Sydney, Australia"
+          }
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          {
+            "badge": "Contributed Talk",
+            "title": "American Astronomical Society (AAS)",
+            "location": "Seattle, Washington, USA"
+          }
+        ]
+      },
+      {
+        "year": "2022",
+        "items": [
+          {
+            "badge": "Contributed Talk",
+            "title": "From Stars to Galaxies II (FSTGII)",
+            "location": "Chalmers University of Technology, Gothenburg, Sweden"
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "items": [
+          {
+            "badge": "Contributed Talk",
+            "title": "VSRP Seminar",
+            "location": "National Centre for Radio Astrophysics, TIFR, India"
+          }
+        ]
+      }
+    ]
+  }

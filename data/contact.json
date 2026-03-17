@@ -1,0 +1,40 @@
+{
+    "title": "My Contact",
+    "subtitle": "Get in touch with me",
+    "details_title": "Contact",
+    "details": [
+      {
+        "label": "Email",
+        "value": "pradoshbarun.das@hdr.mq.edu.au"
+      },
+      {
+        "label": "Location",
+        "value": "Sydney, Australia"
+      }
+    ],
+    "cv_text": "Download My CV here",
+    "cv_link": "/files/CV.pdf",
+    "profiles_title": "Profiles",
+    "profiles": [
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?user=Mav9I-AAAAAJ&hl=en",
+        "icon": "/files/icons/googlescholar.svg"
+      },
+      {
+        "label": "ResearchGate",
+        "href": "https://www.researchgate.net/profile/Pradosh-Das",
+        "icon": "/files/icons/researchgate.svg"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/pradoshbdas",
+        "icon": "/files/icons/github.svg"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/pradosh-barun-das",
+        "icon": "/files/icons/linkedin.svg"
+      }
+    ]
+  }

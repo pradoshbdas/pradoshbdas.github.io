@@ -1,0 +1,12 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Pradosh Barun Das"
+enableRobotsTXT = true
+
+[params]
+  description = "Portfolio website of Pradosh Barun Das, astrophysicist and researcher."
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

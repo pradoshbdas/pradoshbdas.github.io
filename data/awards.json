@@ -1,0 +1,158 @@
+{
+    "title": "Awards & Honors",
+    "intro": "Recognition and distinctions received during my academic journey.",
+    "featured_title": "Featured Recognition",
+    "featured": [
+      {
+        "chip": "Research Visit",
+        "year": "2025",
+        "title": "ESO Early-Career Scientific Research Visit Programme",
+        "org": "European Southern Observatory",
+        "desc": "4-month research visit at ESO, Garching, Germany with Dr. Francesca Primas on stellar spectroscopy, galactic archaeology, and data-driven models."
+      },
+      {
+        "chip": "Scholarship",
+        "year": "2023",
+        "title": "International Research Program (RTP) Scholarship",
+        "org": "Australian Commonwealth Government",
+        "desc": "Competitive RTP scholarship awarded for PhD studies."
+      },
+      {
+        "chip": "Fellowship",
+        "year": "2022",
+        "title": "Chalmers Astrophysics and Space Sciences Summer Fellowship (CASSUM)",
+        "org": "Chalmers University of Technology & University of Virginia",
+        "desc": "Competitive 25,000 SEK summer fellowship to work on young stellar associations."
+      }
+    ],
+    "timeline": [
+      {
+        "year": "2025",
+        "items": [
+          {
+            "chip": "Research Visit",
+            "title": "ESO Early-Career Scientific Research Visit Programme",
+            "org": "European Southern Observatory",
+            "desc": "4-month research visit at ESO, Garching, Germany with Dr. Francesca Primas on stellar spectroscopy, galactic archaeology, and data-driven models."
+          },
+          {
+            "chip": "Grant",
+            "title": "Post-Graduate Research Fund (PGRF) Grant",
+            "org": "Macquarie University",
+            "desc": "Competitive research grant of AUD 6000."
+          },
+          {
+            "chip": "Travel Grant",
+            "title": "ASA Student Travel Assistance Scheme (ASA-STAS) Grant",
+            "org": "Astronomical Society of Australia",
+            "desc": "Competitive travel grant of AUD 1500."
+          },
+          {
+            "chip": "Award Nomination",
+            "title": "Graduate Research Excellence Award",
+            "org": "Macquarie University",
+            "desc": "Nominated by the School of Mathematical and Physical Sciences for excellence in academic and research performance."
+          }
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          {
+            "chip": "Scholarship",
+            "title": "International Research Program (RTP) Scholarship",
+            "org": "Australian Commonwealth Government",
+            "desc": "Competitive RTP scholarship awarded for PhD studies."
+          }
+        ]
+      },
+      {
+        "year": "2022",
+        "items": [
+          {
+            "chip": "Fellowship",
+            "title": "Chalmers Astrophysics and Space Sciences Summer Fellowship (CASSUM)",
+            "org": "Chalmers University of Technology & University of Virginia",
+            "desc": "Competitive 25,000 SEK summer fellowship to work on young stellar associations."
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "items": [
+          {
+            "chip": "Fellowship",
+            "title": "VSRP Research Fellowship",
+            "org": "National Centre for Radio Astrophysics (NCRA) – TIFR",
+            "desc": "Selected among 4 students nationally in India to work on Fast Radio Bursts. Scholarship amount: Rs. 30,000."
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "items": [
+          {
+            "chip": "Fellowship",
+            "title": "IASc–INSA–NASI Summer Research Fellowship",
+            "org": "Indian Academy of Sciences, INSA & NASI",
+            "desc": "Fellowship to conduct research on carbon-enhanced metal poor stars using high-resolution spectroscopy at the Indian Institute of Astrophysics, Bengaluru. Scholarship amount: Rs. 30,000."
+          }
+        ]
+      },
+      {
+        "year": "2018",
+        "items": [
+          {
+            "chip": "Academic Selection",
+            "title": "NIUS Physics & Astronomy Camp",
+            "org": "HBCSE–TIFR",
+            "desc": "Selected nationally on merit to attend the National Undergraduate Physics & Astronomy camp at TIFR, Mumbai."
+          }
+        ]
+      },
+      {
+        "year": "2017–2022",
+        "items": [
+          {
+            "chip": "Scholarship",
+            "title": "DST-INSPIRE Scholarship",
+            "org": "Department of Science & Technology, India",
+            "desc": "National undergraduate merit scholarship. Total support awarded: Rs. 360,000."
+          }
+        ]
+      }
+    ],
+    "olympiads_title": "Olympiads & Contests",
+    "olympiads": [
+      {
+        "chip": "Olympiad",
+        "year": "2015",
+        "title": "IMO – International Mathematics Olympiad (SOF)",
+        "desc": "State Rank 1 (Gold), International Rank 23."
+      },
+      {
+        "chip": "Olympiad",
+        "year": "2016",
+        "title": "IMO – International Mathematics Olympiad (SOF)",
+        "desc": "Zonal Rank 9, International Rank 381."
+      },
+      {
+        "chip": "Olympiad",
+        "year": "2015",
+        "title": "IOM – International Olympiad of Mathematics (Silverzone)",
+        "desc": "State Rank 2 (Silver), International Rank 85."
+      },
+      {
+        "chip": "Olympiad",
+        "year": "2015",
+        "title": "IOM – International Olympiad of Mathematics (Silverzone)",
+        "desc": "State Rank 1 (Gold), International Rank 25."
+      },
+      {
+        "chip": "Olympiad",
+        "year": "2016",
+        "title": "IOM – International Olympiad of Mathematics (Silverzone)",
+        "desc": "State Rank 1 (Gold), International Rank 179."
+      }
+    ]
+  }

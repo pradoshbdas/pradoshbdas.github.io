@@ -1,0 +1,13 @@
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">{{ .Site.Data.nav.brand }}</a>
+    <div class="nav-links">
+      {{ range .Site.Data.nav.items }}
+        <a href="{{ .href }}">{{ .label }}</a>
+      {{ end }}
+    </div>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+      <span class="theme-toggle-icon"></span>
+    </button>
+  </div>
+</nav>

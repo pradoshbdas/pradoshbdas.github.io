@@ -1,0 +1,72 @@
+{
+  "eyebrow": "Hi, I am",
+  "name": "Pradosh Barun Das",
+  "static_role": "Astrophysicist",
+  "rotating_words": [
+    "Science Enthusiast",
+    "Researcher"
+  ],
+  "intro": "I enjoy looking at the night-sky and wondering about the Universe :)",
+  "cv_link": "/files/CV.pdf",
+  "portrait": {
+    "src": "/files/images/profile.webp",
+    "alt": "Pradosh Barun Das"
+  },
+  "social_links": [
+  {
+    "type": "button",
+    "label": "My CV",
+    "href": "/files/CV.pdf",
+    "icon_class": "fa-regular fa-file-lines",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Email",
+    "href": "mailto:pradoshbarun.das@hdr.mq.edu.au",
+    "icon_class": "fa-regular fa-envelope"
+  },
+  {
+    "type": "icon",
+    "label": "LinkedIn",
+    "href": "https://www.linkedin.com/in/pradosh-barun-das",
+    "icon_class": "fa-brands fa-linkedin-in",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Google Scholar",
+    "href": "https://scholar.google.com/citations?user=Mav9I-AAAAAJ&hl=en",
+    "icon_class": "ai ai-google-scholar-square",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Researchgate",
+    "href": "https://www.researchgate.net/profile/Pradosh-Das",
+    "icon_class": "ai ai-researchgate",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Github",
+    "href": "https://github.com/pradoshbdas",
+    "icon_class": "fa-brands fa-github",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Instagram",
+    "href": "https://www.instagram.com/pradosh_torpedo",
+    "icon_class": "fa-brands fa-instagram",
+    "target_blank": true
+  },
+  {
+    "type": "icon",
+    "label": "Facebook",
+    "href": "https://www.facebook.com/pradoshbarun.das.37/",
+    "icon_class": "fa-brands fa-facebook-f",
+    "target_blank": true
+  }
+]
+}

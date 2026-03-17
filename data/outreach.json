@@ -1,0 +1,120 @@
+{
+    "title": "Outreach & Beyond Astronomy",
+    "intro": "Science communication, public engagement, teaching, mentoring, and activities beyond my core research work.",
+    "featured_title": "Featured Outreach & Service",
+    "featured": [
+      {
+        "icon": "☀️",
+        "chip": "Leadership",
+        "year": "2025–ongoing",
+        "title": "President",
+        "org": "Physics and Astronomical Society (MUPAS), Macquarie University, Australia",
+        "desc": "Led a society of 300+ students across disciplines to promote inclusion, diversity, equity, and accessibility in physics- and astronomy-focused events, workshops, and student-led discussions. Organized “The Astronomy Night,” hosting 2,000+ visitors with public outreach events, exhibitions, and telescope observations at the Macquarie Observatory."
+      },
+      {
+        "icon": "🌌",
+        "chip": "Organising",
+        "year": "2024",
+        "title": "Lead Organiser",
+        "org": "Harley Wood School of Astronomy (HWSA, ASA), Australia",
+        "desc": "Organized a 3-day national student astronomy retreat including invited research talks, workshops, and hands-on sessions."
+      },
+      {
+        "icon": "🤝",
+        "chip": "Scientific Service",
+        "year": "2025",
+        "title": "Scientific Assistant",
+        "org": "ESO OPC Expert Panels",
+        "desc": "Supported the ESO Observing Programmes Committee in reviewing telescope observing proposals."
+      }
+    ],
+    "groups": [
+      {
+        "title": "Leadership & Service",
+        "items": [
+          {
+            "icon": "🤝",
+            "chip": "Scientific Service",
+            "year": "2025",
+            "title": "Scientific Assistant",
+            "org": "ESO OPC Expert Panels",
+            "desc": "Supported the ESO Observing Programmes Committee in reviewing telescope observing proposals."
+          },
+          {
+            "icon": "🤝",
+            "chip": "Service",
+            "year": "2023–24, 2024–25, 2025–ongoing",
+            "title": "Student Representative",
+            "org": "Astronomical Society of Australia (ASA) National Council",
+            "desc": "Represent the astronomy student research cohort nationwide for the Astronomical Society of Australia, contributing to policy and event planning for the student community."
+          },
+          {
+            "icon": "☀️",
+            "chip": "Leadership",
+            "year": "2025–ongoing",
+            "title": "President",
+            "org": "Physics and Astronomical Society (MUPAS), Macquarie University, Australia",
+            "desc": "Led a society of 300+ students across disciplines to promote inclusion, diversity, equity, and accessibility in physics- and astronomy-focused events, workshops, and student-led discussions. Organized “The Astronomy Night,” hosting 2,000+ visitors with public outreach events, exhibitions, and telescope observations at the Macquarie Observatory."
+          },
+          {
+            "icon": "🌌",
+            "chip": "Organising",
+            "year": "2024–25",
+            "title": "Lead Organiser",
+            "org": "Astronomy Seminar Series, Macquarie University, Australia",
+            "desc": "Coordinated a seminar series featuring international and domestic speakers, fostering research discussions and collaborative opportunities."
+          },
+          {
+            "icon": "🌌",
+            "chip": "Organising",
+            "year": "2024",
+            "title": "Lead Organiser",
+            "org": "Harley Wood School of Astronomy (HWSA, ASA), Australia",
+            "desc": "Organized a 3-day national student astronomy retreat including invited research talks, workshops, and hands-on sessions."
+          }
+        ]
+      },
+      {
+        "title": "Teaching & Mentoring",
+        "items": [
+          {
+            "icon": "📘",
+            "chip": "Teaching",
+            "year": "2023–2025",
+            "title": "Lab Demonstrator",
+            "org": "Macquarie University, Australia",
+            "desc": "Assisted in undergraduate teaching and practical instruction in physics and astronomy laboratory settings."
+          },
+          {
+            "icon": "🌱",
+            "chip": "Mentoring",
+            "year": "Ongoing",
+            "title": "Student Mentor",
+            "org": "Macquarie University / student community",
+            "desc": "Supported peers and junior students through academic guidance, society activities, and research-community engagement."
+          }
+        ]
+      },
+      {
+        "title": "Public Engagement",
+        "items": [
+          {
+            "icon": "🌌",
+            "chip": "Outreach",
+            "year": "2025",
+            "title": "Astronomy Night Organizer",
+            "org": "Macquarie Observatory / MUPAS",
+            "desc": "Helped organize large-scale public astronomy outreach with exhibitions, telescope observations, and community participation."
+          },
+          {
+            "icon": "🌌",
+            "chip": "Outreach",
+            "year": "Ongoing",
+            "title": "Science Communication & Public Engagement",
+            "org": "Various university and astronomy community events",
+            "desc": "Contributed to public communication of astronomy through events, discussions, and student-facing initiatives."
+          }
+        ]
+      }
+    ]
+  }

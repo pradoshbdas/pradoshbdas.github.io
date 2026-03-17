@@ -1,0 +1,327 @@
+{{ define "body" }}
+  {{ partial "nav.html" . }}
+  <main id="main-content">
+    {{ $nav := .Site.Data.nav }}
+    {{ $hero := .Site.Data.hero }}
+    {{ $about := .Site.Data.about }}
+    {{ $research := .Site.Data.research }}
+    {{ $conferences := .Site.Data.conferences }}
+    {{ $awards := .Site.Data.awards }}
+    {{ $publications := .Site.Data.publications }}
+    {{ $gallery := .Site.Data.gallery }}
+    {{ $outreach := .Site.Data.outreach }}
+    {{ $contact := .Site.Data.contact }}
+    {{ $footer := .Site.Data.footer }}
+    {{ $journey := .Site.GetPage "/snippets/academic-journey" }}
+
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text hero-reveal-left">
+        <p class="eyebrow hero-item hero-delay-1">{{ $hero.eyebrow }}</p>
+
+        <h1 class="hero-name hero-item hero-delay-2">
+          <span class="hero-name-line">{{ $hero.name }}</span>
+        </h1>
+
+        <div class="hero-subtitle hero-item hero-delay-4">
+          <div class="subtitle-static">{{ $hero.static_role }}</div>
+          <div id="changing-word" class="subtitle-rotating"></div>
+        </div>
+
+        <script id="hero-words-data" type="application/json">{{ $hero.rotating_words | jsonify | safeJS }}</script>
+
+        <p class="hero-item hero-delay-5">{{ $hero.intro }}</p>
+
+        <div class="hero-actions hero-item hero-delay-6">
+  {{ range $hero.social_links }}
+    {{ if eq .type "button" }}
+      <a class="button primary-btn" href="{{ .href }}" {{ if .target_blank }}target="_blank" rel="noopener noreferrer"{{ end }}>
+        <span class="btn-icon"><i class="{{ .icon_class }}"></i></span>
+        <span>{{ .label }}</span>
+      </a>
+    {{ else }}
+      <a class="button icon-button" href="{{ .href }}" {{ if .target_blank }}target="_blank" rel="noopener noreferrer"{{ end }} aria-label="{{ .label }}" title="{{ .label }}">
+        <i class="{{ .icon_class }}"></i>
+      </a>
+    {{ end }}
+  {{ end }}
+</div>
+      </div>
+
+      <div class="hero-card hero-reveal-photo hero-delay-3">
+        <div class="portrait portrait-streak">
+          <img src="{{ $hero.portrait.src }}" alt="{{ $hero.portrait.alt }}" width="900" height="675" decoding="async" fetchpriority="high" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="about-intro">
+        <div class="about-copy">
+          <h2>{{ $about.title }}</h2>
+          {{ range $about.paragraphs }}<p class="muted">{{ . }}</p>{{ end }}
+        </div>
+        <aside class="about-summary-card">
+          <div class="about-summary-label">{{ $about.summary_label }}</div>
+          <div class="about-summary-list">
+            {{ range $about.summary_items }}
+            <div class="about-summary-item">
+              <span class="about-summary-key">{{ .key }}</span>
+              {{ range .values }}<span class="about-summary-value">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </aside>
+      </div>
+      <article class="card markdown-body">{{ with $journey }}{{ .Content }}{{ end }}</article>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $research.title }}</h2>
+        <h3 class="muted">{{ $research.subtitle }}</h3>
+      </div>
+      <div class="research-grid">
+        {{ range where .Site.RegularPages "Section" "research" }}
+        <a class="card research-card" href="{{ .RelPermalink }}">
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conferences" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $conferences.title }}</h2>
+        <p>{{ $conferences.intro }}</p>
+      </div>
+      <article class="card markdown-body">
+        <div class="conference-timeline">
+          {{ range $conferences.years }}
+          <section class="conference-year-group">
+            <div class="conference-year-column"><div class="conference-year">{{ .year }}</div></div>
+            <div class="conference-items-column">
+              <div class="conference-group-card">
+                {{ range .items }}
+                <article class="conference-item">
+                  <div class="conference-item-head"><span class="conference-badge">{{ .badge }}</span></div>
+                  <h3 class="conference-title">{{ .title }}</h3>
+                  <p class="conference-meta"><span class="conference-location">{{ .location }}</span></p>
+                </article>
+                {{ end }}
+              </div>
+            </div>
+          </section>
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="awards" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $awards.title }}</h2>
+        <p>{{ $awards.intro }}</p>
+      </div>
+      <article class="card markdown-body">
+        <div class="awards-layout">
+          <div class="awards-featured">
+            <div class="awards-subhead">{{ $awards.featured_title }}</div>
+            <div class="awards-featured-grid">
+              {{ range $awards.featured }}
+              <article class="award-feature-card">
+                <div class="award-feature-top"><span class="award-chip">{{ .chip }}</span><span class="award-feature-year">{{ .year }}</span></div>
+                <h3 class="award-feature-title">{{ .title }}</h3>
+                <p class="award-feature-org">{{ .org }}</p>
+                <p class="award-feature-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </div>
+          <div class="awards-timeline">
+            {{ range $awards.timeline }}
+            <section class="awards-year-group">
+              <div class="awards-year-column"><div class="awards-year">{{ .year }}</div></div>
+              <div class="awards-items-column">
+                <div class="awards-group-card">
+                  {{ range .items }}
+                  <article class="award-item">
+                    <div class="award-item-top"><span class="award-chip">{{ .chip }}</span></div>
+                    <h3 class="award-title">{{ .title }}</h3>
+                    <p class="award-org">{{ .org }}</p>
+                    <p class="award-desc">{{ .desc }}</p>
+                  </article>
+                  {{ end }}
+                </div>
+              </div>
+            </section>
+            {{ end }}
+          </div>
+          <div class="awards-olympiads">
+            <div class="awards-subhead">{{ $awards.olympiads_title }}</div>
+            <div class="awards-olympiad-list">
+              {{ range $awards.olympiads }}
+              <article class="award-mini-card">
+                <div class="award-mini-top"><span class="award-chip">{{ .chip }}</span><span class="award-mini-year">{{ .year }}</span></div>
+                <h3 class="award-mini-title">{{ .title }}</h3>
+                <p class="award-mini-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $publications.title }}</h2>
+        <h3 class="muted">{{ $publications.subtitle }}</h3>
+      </div>
+      <article class="card markdown-body">
+        {{ range $publications.groups }}
+        <section class="pub-group">
+          <h2 class="pub-group-title">{{ .heading }}</h2>
+          <div class="pub-list">
+            {{ range .items }}
+            <article class="pub-card">
+              <div class="pub-card-main">
+                <h3 class="pub-title">{{ .title }}</h3>
+                <p class="pub-authors">{{ .authors }}</p>
+                <p class="pub-journal">{{ .journal }}</p>
+              </div>
+              {{ with .links }}
+              <div class="pub-links">
+                {{ range . }}
+                  {{ if .href }}
+                  <a class="pub-link-pill pub-link-pill-static" href="{{ .href }}" target="_blank" rel="noopener noreferrer" {{ with .title }}title="{{ . }}"{{ end }}>{{ .label }}</a>
+                  {{ else }}
+                  <span class="pub-link-pill pub-link-pill-static">{{ .label }}</span>
+                  {{ end }}
+                {{ end }}
+              </div>
+              {{ end }}
+            </article>
+            {{ end }}
+          </div>
+        </section>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $gallery.title }}</h2>
+        <p>{{ $gallery.intro }}</p>
+      </div>
+      <div class="gallery" id="gallery-grid">
+        {{ range $gallery.images }}
+        <div class="tile"><img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" decoding="async"></div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="outreach" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $outreach.title }}</h2>
+        <p>{{ $outreach.intro }}</p>
+      </div>
+      <article class="card markdown-body">
+        <div class="outreach-layout">
+          <div class="outreach-featured">
+            <div class="outreach-subhead">{{ $outreach.featured_title }}</div>
+            <div class="outreach-featured-grid">
+              {{ range $outreach.featured }}
+              <article class="outreach-feature-card">
+                <div class="outreach-feature-top"><span class="outreach-icon">{{ .icon }}</span><span class="outreach-chip">{{ .chip }}</span><span class="outreach-year">{{ .year }}</span></div>
+                <h3 class="outreach-feature-title">{{ .title }}</h3>
+                <p class="outreach-org">{{ .org }}</p>
+                <p class="outreach-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </div>
+          {{ range $outreach.groups }}
+          <section class="outreach-group">
+            <h2 class="outreach-group-title">{{ .title }}</h2>
+            <div class="outreach-list">
+              {{ range .items }}
+              <article class="outreach-card">
+                <div class="outreach-card-top"><span class="outreach-icon">{{ .icon }}</span><span class="outreach-chip">{{ .chip }}</span><span class="outreach-year">{{ .year }}</span></div>
+                <h3 class="outreach-title">{{ .title }}</h3>
+                <p class="outreach-org">{{ .org }}</p>
+                <p class="outreach-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $contact.title }}</h2>
+        <h3 class="muted">{{ $contact.subtitle }}</h3>
+      </div>
+      <div class="contact-box">
+        <article class="card markdown-body">
+          <h3>{{ $contact.details_title }}</h3>
+          <ul>
+            {{ range $contact.details }}<li><strong>{{ .label }}:</strong> {{ .value }}</li>{{ end }}
+            <li><a href="{{ $contact.cv_link }}" target="_blank" rel="noopener">{{ $contact.cv_text }}</a></li>
+          </ul>
+        </article>
+        <article class="card markdown-body">
+          <h3>{{ $contact.profiles_title }}</h3>
+          <div class="profile-grid">
+            {{ range $contact.profiles }}
+            <a href="{{ .href }}" target="_blank" class="profile-btn" rel="noopener">
+              <img src="{{ .icon }}" alt="{{ .label }} icon" loading="lazy" decoding="async">
+              <span>{{ .label }}</span>
+            </a>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+    {{ partial "footer.html" . }}
+  </main>
+{{ end }}

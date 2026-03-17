@@ -1,0 +1,18 @@
+{
+    "title": "Gallery",
+    "intro": "Some of my favourite pictures",
+    "images": [
+      {
+        "src": "/files/images/gallery/gallery1.jpg",
+        "alt": "Photo 1"
+      },
+      {
+        "src": "/files/images/gallery/gallery2.jpeg",
+        "alt": "Photo 2"
+      },
+      {
+        "src": "/files/images/gallery/gallery3.jpg",
+        "alt": "Photo 3"
+      }
+    ]
+  }
