@@ -27,8 +27,29 @@ h1 {
   color: #8b9099;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  max-width: 16ch;
   min-height: 2.3em;
-  max-width: 12ch;
+}
+
+.subtitle-static,
+.subtitle-rotating,
+#changing-word {
+  display: block;
+}
+
+#changing-word {
+  min-height: 1.15em;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.word-hidden {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.word-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h2 {
@@ -49,25 +70,9 @@ h2 {
   font-size: 1.1rem;
 }
 
-#changing-word {
-  display: inline-block;
-  min-height: 2.2em;
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.word-hidden {
-  opacity: 0;
-  transform: translateY(6px);
-}
-
-.word-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media (max-width: 920px) {
   .hero-subtitle {
-    max-width: none;
+    max-width: 16ch;
   }
 }
 
@@ -83,7 +88,7 @@ h2 {
     color: #8b9099;
     font-weight: 500;
     margin-bottom: 1.5rem;
-    max-width: 12ch;
+    max-width: 16ch;
     min-height: 2.3em;
   }
 }
@@ -220,10 +225,10 @@ h2 {
   animation: portraitBorderStreak 1.5s ease 0.95s forwards;
 }
 
-.portrait img{
-  width:100%;
-  height:auto;
-  object-fit:cover;
+.portrait img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 @keyframes portraitBorderStreak {
@@ -242,3 +247,4 @@ h2 {
     opacity: 0;
   }
 }
+
