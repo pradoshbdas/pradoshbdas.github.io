@@ -302,9 +302,18 @@
         <article class="card markdown-body">
           <h3>{{ $contact.details_title }}</h3>
           <ul>
-            {{ range $contact.details }}<li><strong>{{ .label }}:</strong> {{ .value }}</li>{{ end }}
-            <li><a href="{{ $contact.cv_link }}" target="_blank" rel="noopener">{{ $contact.cv_text }}</a></li>
-          </ul>
+  {{ range $contact.details }}
+    <li>
+      <strong>{{ .label }}:</strong>
+      {{ if .href }}
+        <a href="{{ .href }}">{{ replace .href "mailto:" "" }}</a>
+      {{ else }}
+        {{ .value }}
+      {{ end }}
+    </li>
+  {{ end }}
+  <li><a href="{{ $contact.cv_link }}" target="_blank" rel="noopener">{{ $contact.cv_text }}</a></li>
+</ul>
         </article>
         <article class="card markdown-body">
           <h3>{{ $contact.profiles_title }}</h3>
