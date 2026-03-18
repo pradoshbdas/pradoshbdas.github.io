@@ -3,7 +3,7 @@
     "intro": "Some of my favourite pictures",
     "images": [
       {
-        "src": "/files/images/gallery/1.jpg",
+        "src": "/files/images/gallery/1.jpeg",
         "alt": "Photo 1"
       },
       {
@@ -11,7 +11,7 @@
         "alt": "Photo 2"
       },
       {
-        "src": "/files/images/gallery/3.jpg",
+        "src": "/files/images/gallery/3.jpeg",
         "alt": "Photo 3"
       }
     ]
