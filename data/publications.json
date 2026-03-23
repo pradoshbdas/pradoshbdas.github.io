@@ -1,5 +1,5 @@
 {
-    "title": "Publications",
+    "title": "Publications/Manuscripts",
     "subtitle": "My Published & Upcoming Publications",
     "groups": [
       {
@@ -65,9 +65,9 @@
         "heading": "Upcoming",
         "items": [
           {
-            "title": "Barium and Europium abundances in Galactic disk and bulge: Probes of neutron-capture nucleosynthesis through cosmic time",
-            "authors": "Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., Ness, M., & Worley, C. C.",
-            "journal": "Submitted to MNRAS",
+            "title": "Barium and Europium abundances from the Gaia-ESO Survey using The Cannon",
+            "authors": "Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., & Ness, M.",
+            "journal": "To be submitted to A&A",
             "links": [
               {
                 "label": "Manuscript"
