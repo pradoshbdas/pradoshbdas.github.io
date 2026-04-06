@@ -114,6 +114,7 @@ if (canvas && flash && pageLoader) {
         pageLoader.classList.add("hide");
         document.body.classList.remove("loading");
         document.body.classList.add("page-ready");
+        if (window.startHeroFact) window.startHeroFact();
 
         setTimeout(() => {
           flash.classList.remove("active");

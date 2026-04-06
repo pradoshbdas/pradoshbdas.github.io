@@ -2,28 +2,13 @@ function initThemeToggle() {
   const toggleBtn = document.getElementById("theme-toggle");
   if (!toggleBtn) return;
 
+  const root = document.documentElement;
+
   function enableThemeTransition() {
-    document.documentElement.classList.add("theme-transition");
+    root.classList.add("theme-transition");
     setTimeout(() => {
-      document.documentElement.classList.remove("theme-transition");
+      root.classList.remove("theme-transition");
     }, 400);
-  }
-
-  function setTheme(theme) {
-    enableThemeTransition();
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-    updateIcon(theme);
-  }
-
-  function getInitialTheme() {
-    const savedTheme = localStorage.getItem("theme");
-
-    // If user has previously chosen a theme, use it
-    if (savedTheme) return savedTheme;
-
-    // Otherwise default to dark
-    return "dark";
   }
 
   function updateIcon(theme) {
@@ -34,14 +19,46 @@ function initThemeToggle() {
     );
   }
 
-  // Set initial theme
-  const initialTheme = getInitialTheme();
-  document.documentElement.setAttribute("data-theme", initialTheme);
-  updateIcon(initialTheme);
+  function updateThemeLogos(theme) {
+    const macquarieLogo = document.querySelector(".institution-logo.macquarie");
+    const esoLogo = document.querySelector(".institution-logo.eso");
 
-  // Toggle button
+    if (macquarieLogo) {
+      macquarieLogo.src =
+        theme === "dark"
+          ? "/macquarie-light.png"
+          : "/macquarie-dark.png";
+    }
+
+    if (esoLogo) {
+      esoLogo.src =
+        theme === "dark"
+          ? "/eso-light.png"
+          : "/eso-dark.png";
+    }
+  }
+
+  function setTheme(theme) {
+    enableThemeTransition();
+    root.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    updateIcon(theme);
+    updateThemeLogos(theme);
+  }
+
+  function getInitialTheme() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) return savedTheme;
+    return "dark";
+  }
+
+  const initialTheme = getInitialTheme();
+  root.setAttribute("data-theme", initialTheme);
+  updateIcon(initialTheme);
+  updateThemeLogos(initialTheme);
+
   toggleBtn.addEventListener("click", () => {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const currentTheme = root.getAttribute("data-theme");
     const newTheme = currentTheme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   });

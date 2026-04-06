@@ -1,13 +1,86 @@
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="#home" class="brand">{{ .Site.Data.nav.brand }}</a>
+    <div class="brand-wrap">
+      <a href="#home" class="brand">{{ .Site.Data.nav.brand }}</a>
+
+      <div class="brand-icons" aria-label="Affiliations">
+        <a
+          href="https://www.mq.edu.au/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="brand-icon-btn"
+          aria-label="Macquarie University"
+        >
+          <img src="/macquarie-dark.png" alt="Macquarie University" class="institution-logo macquarie">
+        </a>
+
+        <a
+          href="https://www.eso.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="brand-icon-btn"
+          aria-label="ESO Germany"
+        >
+          <img src="/eso-dark.png" alt="ESO" class="institution-logo eso">
+        </a>
+      </div>
+    </div>
+
     <div class="nav-links">
       {{ range .Site.Data.nav.items }}
         <a href="{{ .href }}">{{ .label }}</a>
       {{ end }}
     </div>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-      <span class="theme-toggle-icon"></span>
-    </button>
+
+    <div class="nav-right">
+      <a
+        href="https://ui.adsabs.harvard.edu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="nasa-ads-btn"
+        aria-label="NASA ADS"
+      >
+        {{ partial "icons/nasa-ads.html" . }}
+        <span class="nasa-ads-label">NASA ADS</span>
+      </a>
+
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle-icon"></span>
+      </button>
+
+      <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </nav>
+
+<div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-head">
+    <div class="mobile-menu-brand">{{ .Site.Data.nav.brand }}</div>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav class="mobile-menu-links" aria-label="Mobile navigation">
+    {{ range .Site.Data.nav.items }}
+      <a href="{{ .href }}">{{ .label }}</a>
+    {{ end }}
+  </nav>
+
+  <div class="mobile-menu-actions">
+    <a
+      href="https://ui.adsabs.harvard.edu/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="nasa-ads-btn mobile-nasa"
+      aria-label="NASA ADS"
+    >
+      {{ partial "icons/nasa-ads.html" . }}
+      <span class="nasa-ads-label">NASA ADS</span>
+    </a>
+  </div>
+</aside>

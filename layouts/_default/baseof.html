@@ -8,8 +8,19 @@
   {{ partial "head.html" . }}
 </head>
 <body class="loading">
+  <!-- BACKGROUND VIDEO/GIF -->
+  <div id="bg-media">
+    <video autoplay muted loop playsinline>
+      <source src="/background.mp4" type="video/mp4">
+      <!-- fallback for GIF: -->
+      <!-- <img src="/files/images/background.gif" alt=""> -->
+    </video>
+  </div>
   {{ partial "loader.html" . }}
   {{ block "body" . }}{{ end }}
   {{ partial "scripts.html" . }}
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  ↑
+</button>
 </body>
 </html>

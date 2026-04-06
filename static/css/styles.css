@@ -54,19 +54,23 @@ body {
   position: relative;
 }
 
-body::before {
-  content: "";
+#bg-media {
   position: fixed;
   inset: -30px;
-  background-color: var(--bg);
-  background-image: url("/files/images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(0.8px);
-  opacity: 0.2;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+}
+
+#bg-media video,
+#bg-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(0.3px);
+  opacity: 0.2;
 }
 
 a {
@@ -125,23 +129,6 @@ html.theme-transition *::after {
 }
 
 
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--nav-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.1rem 0;
-  gap: 1rem;
-}
 
 .hero,
 .section {
@@ -180,6 +167,27 @@ html.theme-transition *::after {
   width: 100%;
   max-width: 360px;
   justify-self: end;
+}
+
+.hero-fact span {
+  position: relative;
+}
+
+.hero-fact span::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 4px;
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+  vertical-align: -0.1em;
+  animation: blink-cursor 0.8s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
 }
 
 .portrait {
@@ -301,11 +309,6 @@ html.theme-transition *::after {
 
 /* phone */
 @media (max-width: 640px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.9rem 0;
-  }
 
   .hero {
     padding-top: 12rem;
@@ -345,18 +348,79 @@ html.theme-transition *::after {
   }
 }
 
-.brand {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  height: 100%;
+/* ================================
+   BACK TO TOP BUTTON
+================================ */
+.back-to-top {
+  display: none;
 }
 
-.brand span {
-  color: var(--accent);
+@media (max-width: 980px) {
+  .back-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 1200;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      border-color 0.2s ease,
+      background 0.2s ease,
+      color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  html[data-theme="dark"] .back-to-top {
+    background: rgba(8, 12, 24, 0.9);
+    color: var(--text);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  html[data-theme="dark"] .back-to-top:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  html[data-theme="light"] .back-to-top {
+    background: rgba(255, 255, 255, 0.82);
+    color: #1f2937;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+  }
+
+  html[data-theme="light"] .back-to-top:hover {
+    border-color: rgba(59, 130, 246, 0.35);
+    color: var(--accent);
+    background: rgba(255, 255, 255, 0.92);
+  }
 }
+
+/* ================================
+   NAVBAR
+================================ */
 
 .nav {
   position: sticky;
@@ -369,37 +433,143 @@ html.theme-transition *::after {
   -webkit-backdrop-filter: blur(14px);
 }
 
+.nav .container {
+  width: min(calc(100% - 2rem), 1380px);
+}
+
 .nav-inner {
   height: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 1rem;
 }
 
+.brand-wrap {
+  padding-right: 0.75rem;
+  border-right: 0px solid rgb(0, 0, 0);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: max-content;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(120, 200, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.brand:hover,
+.brand:focus-visible {
+  color: var(--accent);
+}
+
+.brand-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.brand-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.brand-icon-btn:hover,
+.brand-icon-btn:focus-visible {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.institution-logo {
+  display: block;
+  height: 28px;
+  width: auto;
+  overflow: visible;
+}
+
+/* Fine-tune each logo individually */
+.institution-logo[src*="macquarie"] {
+  height: 40px;
+}
+
+.institution-logo[src*="eso"] {
+  height: 55px;
+  width: 45px;
+  padding-top: 7px;
+  padding-bottom: 6.5px;
+  padding-left: 10px;
+}
+
 .nav-links {
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  height: 100%;
+  gap: 1rem;
+  min-width: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-links a {
   color: var(--text);
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 500;
-  transition: 0.2s ease;
+  transition: color 0.2s ease;
   display: inline-flex;
   align-items: center;
-  height: 100%;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
-.nav-links a.active,
-.brand.active {
+.nav-links a.active {
   color: var(--accent);
+}
+
+.nasa-ads-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.38rem 0.75rem 0.38rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.82rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.nasa-ads-btn:hover,
+.nasa-ads-btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.nasa-ads-logo {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .nav-scrolled {
@@ -409,28 +579,82 @@ html.theme-transition *::after {
   -webkit-backdrop-filter: blur(14px);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1180px) {
+  .nav-inner {
+    grid-template-columns: auto 1fr auto;
+    row-gap: 0.8rem;
+  }
+
+  .theme-toggle {
+    justify-self: end;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
   .nav {
     height: auto;
   }
 
   .nav-inner {
     min-height: var(--nav-height);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    grid-template-columns: 1fr auto auto;
     padding: 1rem 0;
   }
 
-  .nav-links {
-    height: auto;
+  .brand-wrap {
+    min-width: 0;
   }
 
-  .nav-links a,
-  .brand {
-    height: auto;
+  .nav-links {
+    grid-column: 1 / -1;
+    order: 4;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    overflow-x: visible;
+    gap: 0.9rem 1rem;
   }
 }
+
+@media (max-width: 640px) {
+  .nav-inner {
+    grid-template-columns: 1fr auto auto;
+    gap: 0.75rem;
+  }
+
+  .brand-wrap {
+    gap: 0.55rem;
+  }
+
+  .brand {
+    font-size: 0.95rem;
+  }
+
+  .institution-logo {
+    height: 24px;
+  }
+
+  .nasa-ads-label {
+    display: none;
+  }
+
+  .nasa-ads-btn {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
 
 .eyebrow {
   font-size: 1rem;
@@ -3061,15 +3285,6 @@ svg {
   .footer {
     margin-bottom: 0 !important;
     padding-bottom: calc(4rem + env(safe-area-inset-bottom));
-  }
-
-  .nav,
-  nav,
-  .nav-inner,
-  .nav-links,
-  header.nav,
-  .site-nav {
-    display: none !important;
   }
 }
 

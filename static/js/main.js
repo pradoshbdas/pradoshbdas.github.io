@@ -161,6 +161,37 @@ function initHeroReplayOnView() {
   observer.observe(hero);
 }
 
+// Burger menu
+(function () {
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('nav-links');
+  if (!burger || !navLinks) return;
+
+  burger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+
+  // close on link click
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // close on outside click
+  document.addEventListener('click', (e) => {
+    if (!burger.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', false);
+    }
+  });
+})();
+
 
 
 window.initNavBehavior = initNavBehavior;
