@@ -6,6 +6,16 @@
         "heading": "Published",
         "items": [
           {
+            "title": "Barium and Europium abundances from the Gaia-ESO Survey using The Cannon",
+            "authors": "Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., & Ness, M.",
+            "journal": "Submitted to A&A(under peer review)",
+            "links": [
+              {
+                "label": "Manuscript"
+              }
+            ]
+          },
+          {
             "title": "The GALAH Survey: Neutron-Capture Elemental Abundances for 350,000 Gaia-RVS Spectra and the Chemodynamics of Accreted Structures",
             "authors": "Das, P. B., Zucker, D. B., Mura-Guzmán, A., Borsato, N. W., de Silva, G. M., Buder, S., Feuillet, D., Nordlander, T., Ness, M., Martell, S. L., Kos, J., de Grijs, R., Bland-Hawthorn, J., Freeman, K. C., Casey, A. R., Lewis, G. F., Stello, D., and the GALAH Collaboration",
             "journal": "Submitted for peer-review to MNRAS",
@@ -58,17 +68,6 @@
             "title": "Understanding the Spectral Characteristics of CEMP Star BD-19132, using High-Resolution Spectroscopy",
             "authors": "Das, P. B., & Goswami, A.",
             "journal": "IASc-INSA-NASI Fellowship Research"
-          }
-          ,
-          {
-            "title": "Barium and Europium abundances from the Gaia-ESO Survey using The Cannon",
-            "authors": "Das, P. B., Primas, F., de Silva, G. M., Guiglion, G., Zucker, D. B., & Ness, M.",
-            "journal": "Submitted to A&A(under peer review)",
-            "links": [
-              {
-                "label": "Manuscript"
-              }
-            ]
           }
         ]
       },
