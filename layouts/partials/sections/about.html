@@ -1,0 +1,26 @@
+{{ $about := .Site.Data.about }}
+{{ $journey := .Site.GetPage "/snippets/academic-journey" }}
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="about-intro">
+        <div class="about-copy">
+          <h2>{{ $about.title }}</h2>
+          {{ range $about.paragraphs }}<p class="muted">{{ . }}</p>{{ end }}
+        </div>
+        <aside class="about-summary-card">
+          <div class="about-summary-label">{{ $about.summary_label }}</div>
+          <div class="about-summary-list">
+            {{ range $about.summary_items }}
+            <div class="about-summary-item">
+              <span class="about-summary-key">{{ .key }}</span>
+              {{ range .values }}<span class="about-summary-value">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </aside>
+      </div>
+      <article class="card markdown-body">{{ with $journey }}{{ .Content }}{{ end }}</article>
+    </div>
+  </div>
+</section>

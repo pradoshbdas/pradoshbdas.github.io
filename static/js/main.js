@@ -148,14 +148,20 @@ function startHeroAnimation() {
 function initHeroReplayOnView() {
   const hero = document.getElementById("home");
   if (!hero) return;
-  let hasBeenVisible = false;
+  // The hero has already been revealed by startHeroAnimation().
+  // On initial observation, do not replay it; only replay if the user
+  // scrolls completely away and then comes back into view.
+  let hasBeenVisible = true;
+  let hasLeftView = false;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting && !hasBeenVisible) {
+      if (!entry.isIntersecting) {
+        hasBeenVisible = false;
+        hasLeftView = true;
+      } else if (hasLeftView && !hasBeenVisible) {
         hasBeenVisible = true;
         restartHeroReveal();
       }
-      if (!entry.isIntersecting) hasBeenVisible = false;
     });
   }, { threshold: 0.55 });
   observer.observe(hero);
@@ -199,3 +205,6 @@ window.initThemeToggle = initThemeToggle;
 window.restartHeroReveal = restartHeroReveal;
 window.startHeroAnimation = startHeroAnimation;
 window.initHeroReplayOnView = initHeroReplayOnView;
+
+window.startWordRotation = startWordRotation;
+window.getHeroWords = getHeroWords;

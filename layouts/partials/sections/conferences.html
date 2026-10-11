@@ -1,0 +1,23 @@
+{{ $conferences := .Site.Data.conferences }}
+<section id="conferences" class="section">
+  <div class="container"><div class="section-shell">
+    <div class="section-head"><h2>{{ $conferences.title }}</h2><p>{{ $conferences.intro }}</p></div>
+    <div class="portfolio-explorer card" data-conference-explorer>
+      <div class="explorer-heading"><div><span class="explorer-eyebrow">ACADEMIC ENGAGEMENTS</span><h3>Ideas shared around the world</h3></div><span class="explorer-count">{{ $conferenceCount := 0 }}{{ range $conferences.years }}{{ $conferenceCount = add $conferenceCount (len .items) }}{{ end }}{{ $conferenceCount }} engagements</span></div>
+      <div class="explorer-toolbar" role="group" aria-label="Filter conferences by year">
+        <button class="explorer-filter is-active" type="button" data-conference-filter="all" aria-pressed="true">All years</button>
+        {{ range $conferences.years }}<button class="explorer-filter" type="button" data-conference-filter="{{ .year }}" aria-pressed="false">{{ .year }}</button>{{ end }}
+      </div>
+      <div class="explorer-grid" aria-live="polite">
+        {{ range $conferences.years }}{{ $year := .year }}{{ range .items }}
+        <article class="engagement-card" data-conference-year="{{ $year }}">
+          <div class="engagement-top"><span class="engagement-type">{{ .badge }}</span><span class="engagement-year">{{ $year }}</span></div>
+          <h3>{{ .title }}</h3>
+          <p class="engagement-place"><span aria-hidden="true">⌖</span> {{ .location }}</p>
+        </article>
+        {{ end }}{{ end }}
+      </div>
+      <p class="explorer-empty" hidden>No conferences match this selection.</p>
+    </div>
+  </div></div>
+</section>

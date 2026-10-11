@@ -1,0 +1,40 @@
+{{ $contact := .Site.Data.contact }}
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $contact.title }}</h2>
+        <h3 class="muted">{{ $contact.subtitle }}</h3>
+      </div>
+      <div class="contact-box">
+        <article class="card markdown-body">
+          <h3>{{ $contact.details_title }}</h3>
+          <ul>
+  {{ range $contact.details }}
+    <li>
+      <strong>{{ .label }}:</strong>
+      {{ if .href }}
+        <a href="{{ .href }}">{{ replace .href "mailto:" "" }}</a>
+      {{ else }}
+        {{ .value }}
+      {{ end }}
+    </li>
+  {{ end }}
+  <li><a href="{{ $contact.cv_link }}" target="_blank" rel="noopener">{{ $contact.cv_text }}</a></li>
+</ul>
+        </article>
+        <article class="card markdown-body">
+          <h3>{{ $contact.profiles_title }}</h3>
+          <div class="profile-grid">
+            {{ range $contact.profiles }}
+            <a href="{{ .href }}" target="_blank" class="profile-btn" rel="noopener">
+              <img src="{{ .icon }}" alt="{{ .label }} icon" loading="lazy" decoding="async">
+              <span>{{ .label }}</span>
+            </a>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

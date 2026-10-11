@@ -1,0 +1,14 @@
+{{ define "body" }}
+  {{ partial "nav.html" . }}
+  <main id="main-content" class="portfolio-inner-page">
+    {{ if eq .Section "about" }}{{ partial "sections/about.html" . }}
+    {{ else if eq .Section "conferences" }}{{ partial "sections/conferences.html" . }}
+    {{ else if eq .Section "awards" }}{{ partial "sections/awards.html" . }}
+    {{ else if eq .Section "publications" }}{{ partial "sections/publications.html" . }}
+    {{ else if eq .Section "gallery" }}{{ partial "sections/gallery.html" . }}
+    {{ else if eq .Section "outreach" }}{{ partial "sections/outreach.html" . }}
+    {{ else if eq .Section "contact" }}{{ partial "sections/contact.html" . }}
+    {{ else }}<section class="section"><div class="container"><article class="card markdown-body">{{ .Content }}</article></div></section>{{ end }}
+    {{ partial "footer.html" . }}
+  </main>
+{{ end }}

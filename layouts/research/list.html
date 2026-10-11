@@ -1,67 +1,65 @@
 {{ define "body" }}
-  {{ partial "nav.html" . }}
-  <main id="main-content">
-<section id="research" class="section">
-      <div class="container">
-        <div class="section-shell">
-          <div class="section-head">
-            <h2>Research</h2>
-            <h3 class="muted">My research spans astrophysics, stellar spectroscopy, and computational methods.</h3>
-          </div>
-          <div class="research-grid">
-
-            <a class="card research-card" href="/research/accretion-structures/">
-              <h3>Accretion Structures</h3>
-              <p>Accretion disks, mass transfer, and compact-object environments.</p>
-            </a>
-
-            <a class="card research-card" href="/research/chemical-tagging/">
-              <h3>Chemical Tagging</h3>
-              <p>Tracing stellar origins and shared formation environments through abundance patterns.</p>
-            </a>
-
-            <a class="card research-card" href="/research/galactic-archaeology/">
-              <h3>Galactic Archaeology</h3>
-              <p>Formation history of the Milky Way through stellar populations and chemical evolution.</p>
-            </a>
-
-            <a class="card research-card" href="/research/ml-spectroscopy/">
-              <h3>Machine Learning for Stellar Spectroscopy</h3>
-              <p>Data-driven methods for extracting stellar parameters and abundance information.</p>
-            </a>
-
-            <a class="card research-card" href="/research/stellar/">
-              <h3>Stellar Spectroscopy</h3>
-              <p>Spectroscopy, stellar populations, and galactic evolution.</p>
-            </a>
-
-          </div>
+{{ partial "nav.html" . }}
+<main id="main-content" class="portfolio-inner-page featured-research-page">
+  <section id="research" class="section">
+    <div class="container">
+      <div class="section-shell">
+        <header class="section-head featured-research-heading">
+          <span class="featured-eyebrow">SELECTED WORK · 2025—2026</span>
+          <h2>Research</h2>
+          <h3 class="muted">Using stellar spectra and chemical signatures to explore the history and evolution of stars and our Galaxy.</h3>
+        </header>
+        <div class="featured-research-list">
+          <article class="featured-paper">
+            <figure class="featured-paper-visual">
+              <img src="/files/research-figures/galah-800k.webp" loading="eager" alt="Published diagrams showing stellar elemental abundance distributions in the GALAH and Gaia RVS study" />
+              <figcaption>Figure 10 · Chemical-abundance distributions used to examine stellar populations in the Galactic disc (Das et al., 2025).</figcaption>
+            </figure>
+            <div class="featured-paper-copy">
+              <div class="featured-paper-meta"><span>01 / 03</span><span>MNRAS · 2025</span></div>
+              <h3>Reading the chemistry of 800,000 stars</h3>
+              <p>Using <em>The Cannon</em>, a data-driven generative model, we transferred stellar parameters and chemical abundances from high-resolution GALAH DR4 observations to 796,633 medium-resolution Gaia DR3 RVS spectra. Trained on 14,484 stars common to both surveys, the model inferred eight stellar labels, including effective temperature, surface gravity and elemental abundances. We validated the resulting catalogue against open and globular clusters and recovered the characteristic high-α and low-α sequences of the Galactic disc in the [Ti/Fe]–[Fe/H] plane, demonstrating the potential of Gaia RVS for large-scale Galactic archaeology.</p>
+              <div class="featured-paper-links">
+                <a href="https://doi.org/10.1093/mnras/staf169" target="_blank" rel="noopener noreferrer">Journal article <span aria-hidden="true">↗</span></a>
+                <a href="/files/staf169.pdf" target="_blank" rel="noopener noreferrer">Read PDF <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="featured-paper">
+            <figure class="featured-paper-visual">
+              <img src="/files/research-figures/galah-neutron-capture.webp" loading="lazy" alt="Published density distributions comparing chemical abundance patterns of selected Galactic stellar populations" />
+              <figcaption>Figure 8 · Chemical-abundance distributions highlighting candidate accreted stellar populations (Das et al., 2026).</figcaption>
+            </figure>
+            <div class="featured-paper-copy">
+              <div class="featured-paper-meta"><span>02 / 03</span><span>MNRAS · 2026</span></div>
+              <h3>Uncovering traces of an ancient galactic merger</h3>
+              <p>Building on our previous GALAH–Gaia analysis, we extended <em>The Cannon</em> to infer neutron-capture abundances of Zr, Ce and Nd for 357,415 red giants observed by Gaia RVS. Using a training sample of 2,747 GALAH DR4 stars, we derived 11 stellar labels and investigated weak neutron-capture features through differential spectral analysis and cross-correlation. We then developed a probabilistic chemical-classification framework, combining logistic regression with MCMC sampling, to identify candidate members of the Gaia–Sausage–Enceladus accretion event. Independent kinematic constraints were used to assess the chemically selected populations.</p>
+              <div class="featured-paper-links">
+                <a href="https://doi.org/10.1093/mnras/stag1142" target="_blank" rel="noopener noreferrer">Journal article <span aria-hidden="true">↗</span></a>
+                <a href="/files/stag1142.pdf" target="_blank" rel="noopener noreferrer">Read PDF <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="featured-paper">
+            <figure class="featured-paper-visual">
+              <img src="/files/research-figures/gaia-eso-ba-eu-schematic.svg" loading="lazy" alt="Illustrative diagram of the Gaia-ESO HR15N wavelength region highlighting the Ba II 6496.9 Å and Eu II 6645.1 Å diagnostic lines" />
+              <figcaption>HR15N spectral coverage (6440–6815 Å), highlighting the Ba II 6496.9 Å and Eu II 6645.1 Å diagnostics. Schematic illustration, not observational data (Das et al., 2026).</figcaption>
+            </figure>
+            <div class="featured-paper-copy">
+              <div class="featured-paper-meta"><span>03 / 03</span><span>A&amp;A · 2026</span></div>
+              <h3>Tracing neutron-capture enrichment with the Gaia-ESO Survey</h3>
+              <p>We applied <em>The Cannon</em> to 36,263 FLAMES/GIRAFFE HR15N spectra from the Gaia-ESO Survey to derive homogeneous stellar parameters and the neutron-capture abundances of barium and europium, which trace <em>s</em>- and <em>r</em>-process enrichment, respectively. Trained on 782 reference spectra from Gaia-ESO DR5, the model incorporates multi-dimensional quality flags and signal-to-noise-dependent uncertainties to assess abundance reliability. The resulting catalogue provides approximately 21,000 reliable Ba measurements and 400 Eu measurements, with validation against Gaia Benchmark Stars, GALAH DR4 and open clusters. These measurements offer new constraints on neutron-capture enrichment across Galactic disc populations and a framework for future spectroscopic surveys.</p>
+              <div class="featured-paper-links">
+                <a href="https://doi.org/10.1051/0004-6361/202660092" target="_blank" rel="noopener noreferrer">Journal article <span aria-hidden="true">↗</span></a>
+                <a href="https://arxiv.org/pdf/2610.07487" target="_blank" rel="noopener noreferrer">Read PDF <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
         </div>
+        <p class="featured-research-note">Figures from the first two papers are reproduced under CC BY 4.0. The Gaia-ESO Ba/Eu illustration is a labelled schematic, not a published data figure. Research summaries reflect the cited papers.</p>
       </div>
-    </section>
-    <footer class="site-footer">
-  <div class="container footer-content">
-    <div class="footer-social">
-
-      <a href="https://www.instagram.com/pradosh_torpedo" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-
-      <a href="https://www.facebook.com/pradoshbarun.das.37/" class="social-btn" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-
-      <a href="https://x.com/yourusername" class="social-btn" aria-label="X" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-
-      <a href="https://reddit.com/user/yourusername" class="social-btn" aria-label="Reddit" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-reddit-alien"></i>
-      </a>
-
     </div>
-    <div class="footer-bottom">© 2026 Pradosh Barun Das</div>
-  </div>
-</footer>
-  </main>
+  </section>
+  {{ partial "footer.html" . }}
+</main>
 {{ end }}

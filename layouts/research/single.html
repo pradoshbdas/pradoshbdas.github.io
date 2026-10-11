@@ -1,11 +1,12 @@
 {{ define "body" }}
-<main class="research-page">
+{{ partial "nav.html" . }}
+<main id="main-content" class="research-page portfolio-inner-page">
   <section class="section research-article-section">
     <div class="container">
       <div class="section-shell">
         <div class="research-page-topbar">
-          <a class="back-link" href="/#research"><i class="fa-solid fa-arrow-left"></i><span>Back to Research</span></a>
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+          <a class="back-link" href="/research/"><i class="fa-solid fa-arrow-left"></i><span>Back to Research</span></a>
+
         </div>
         <div class="section-head">
           <h2 id="research-page-title">{{ .Title }}</h2>
@@ -15,5 +16,6 @@
       </div>
     </div>
   </section>
+{{ partial "footer.html" . }}
 </main>
 {{ end }}

@@ -1,0 +1,48 @@
+{{ $hero := .Site.Data.hero }}
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text hero-reveal-left">
+        <p class="eyebrow hero-item hero-delay-1">{{ $hero.eyebrow }}</p>
+
+        <h1 class="hero-name hero-item hero-delay-2">
+          <span class="hero-name-line">{{ $hero.name }}</span>
+        </h1>
+
+        <div class="hero-subtitle hero-item hero-delay-4">
+          <div class="subtitle-static">{{ $hero.static_role }}</div>
+          <div id="changing-word" class="subtitle-rotating"></div>
+        </div>
+
+        <script id="hero-words-data" type="application/json">{{ $hero.rotating_words | jsonify | safeJS }}</script>
+
+        <p class="hero-item hero-delay-5">{{ $hero.intro }}</p>
+        <p>Some Interesting Facts:</p>
+        <p class="hero-fact hero-item hero-delay-5">
+  <span id="hero-fact"></span>
+</p>
+        <div class="hero-actions hero-item hero-delay-6">
+  {{ range $hero.social_links }}
+    {{ if eq .type "button" }}
+      <a class="button primary-btn" href="{{ .href }}" {{ if .target_blank }}target="_blank" rel="noopener noreferrer"{{ end }}>
+        <span class="btn-icon"><i class="{{ .icon_class }}"></i></span>
+        <span>{{ .label }}</span>
+      </a>
+    {{ else }}
+      <a class="button icon-button" href="{{ .href }}" {{ if .target_blank }}target="_blank" rel="noopener noreferrer"{{ end }} aria-label="{{ .label }}" title="{{ .label }}">
+        <i class="{{ .icon_class }}"></i>
+      </a>
+    {{ end }}
+  {{ end }}
+</div>
+      </div>
+
+      <div class="hero-card hero-reveal-photo hero-delay-3">
+        <div class="portrait portrait-streak">
+          <img src="{{ $hero.portrait.src }}" alt="{{ $hero.portrait.alt }}" width="900" height="675" decoding="async" fetchpriority="high" />
+        </div>
+        <!--<p id="hero-fact" class="hero-fact"></p>-->
+      </div>
+    </div>
+  </div>
+</section>

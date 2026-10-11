@@ -1,0 +1,40 @@
+{{ $publications := .Site.Data.publications }}
+<section id="publications" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $publications.title }}</h2>
+        <h3 class="muted">{{ $publications.subtitle }}</h3>
+      </div>
+      <article class="card markdown-body">
+        {{ range $publications.groups }}
+        <section class="pub-group">
+          <h2 class="pub-group-title">{{ .heading }}</h2>
+          <div class="pub-list">
+            {{ range .items }}
+            <article class="pub-card">
+              <div class="pub-card-main">
+                <h3 class="pub-title">{{ .title }}</h3>
+                <p class="pub-authors">{{ .authors }}</p>
+                <p class="pub-journal">{{ .journal }}</p>
+              </div>
+              {{ with .links }}
+              <div class="pub-links">
+                {{ range . }}
+                  {{ if .href }}
+                  <a class="pub-link-pill pub-link-pill-static" href="{{ .href }}" target="_blank" rel="noopener noreferrer" {{ with .title }}title="{{ . }}"{{ end }}>{{ .label }}</a>
+                  {{ else }}
+                  <span class="pub-link-pill pub-link-pill-static">{{ .label }}</span>
+                  {{ end }}
+                {{ end }}
+              </div>
+              {{ end }}
+            </article>
+            {{ end }}
+          </div>
+        </section>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</section>

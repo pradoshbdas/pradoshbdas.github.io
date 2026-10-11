@@ -1,14 +1,41 @@
 {
   "brand": "Pradosh Barun Das",
   "items": [
-    { "label": "Home", "href": "/" },
-    { "label": "About Me", "href": "#about" },
-    { "label": "Research", "href": "#research" },
-    { "label": "Conferences", "href": "#conferences" },
-    { "label": "Awards", "href": "#awards" },
-    { "label": "Publications", "href": "#publications" },
-    { "label": "Gallery", "href": "#gallery" },
-    { "label": "Outreach", "href": "#outreach" },
-    { "label": "Contact", "href": "#contact" }
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About Me",
+      "href": "/about/"
+    },
+    {
+      "label": "Research",
+      "href": "/research/"
+    },
+    {
+      "label": "Conferences",
+      "href": "/conferences/"
+    },
+    {
+      "label": "Awards",
+      "href": "/awards/"
+    },
+    {
+      "label": "Publications",
+      "href": "/publications/"
+    },
+    {
+      "label": "Gallery",
+      "href": "/gallery/"
+    },
+    {
+      "label": "Outreach",
+      "href": "/outreach/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
   ]
 }

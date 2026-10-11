@@ -1,38 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-  if (window.startAstroFacts) {
-    window.startAstroFacts();
+  const skipIntro = document.documentElement.classList.contains("skip-intro");
+
+  if (window.initNavBehavior) window.initNavBehavior();
+  if (window.initThemeToggle) window.initThemeToggle();
+  if (window.initMobileMenu) window.initMobileMenu();
+  if (window.initBackToTop) window.initBackToTop();
+
+  if (skipIntro) {
+    document.body.classList.remove("loading");
+    document.body.classList.add("page-ready");
+    // The hero is already visible via skip-intro CSS. Rotate its subtitle
+    // without restarting the first-visit entrance animation.
+    if (window.startWordRotation && window.getHeroWords) {
+      window.startWordRotation(document.getElementById("changing-word"), window.getHeroWords());
+    }
+    if (window.startHeroFact) window.startHeroFact();
+    return;
   }
 
-  if (window.initNavBehavior) {
-    window.initNavBehavior();
-  }
-
-  if (window.initThemeToggle) {
-    window.initThemeToggle();
-  }
-
-  if (window.startHeroAnimation) {
-    window.startHeroAnimation();
-  }
-
-  if (window.initHeroReplayOnView) {
-    window.initHeroReplayOnView();
-  }
-
-  if (window.initMobileMenu) {
-  window.initMobileMenu();
-}
-
-  if (window.initBackToTop) {
-  window.initBackToTop();
-}
-
+  if (window.startAstroFacts) window.startAstroFacts();
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       setTimeout(() => {
-        if (typeof window.startSunZoom === "function") {
-          window.startSunZoom();
-        }
+        if (typeof window.startSunZoom === "function") window.startSunZoom();
       }, 250);
     });
   });

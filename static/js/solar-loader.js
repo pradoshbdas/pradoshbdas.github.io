@@ -2,7 +2,7 @@ const canvas = document.getElementById("solar-loader");
 const flash = document.getElementById("white-flash");
 const pageLoader = document.getElementById("page-loader");
 
-if (canvas && flash && pageLoader) {
+if (canvas && flash && pageLoader && document.documentElement.classList.contains("play-intro")) {
   const ctx = canvas.getContext("2d");
 
   let width = window.innerWidth;
@@ -106,6 +106,7 @@ if (canvas && flash && pageLoader) {
 
       if (sunRadius > screenCoverRadius * 1.15) {
         finished = true;
+        try { sessionStorage.setItem("pradosh-intro-seen", "1"); } catch (e) {}
 
         if (window.stopAstroFacts) {
           window.stopAstroFacts();

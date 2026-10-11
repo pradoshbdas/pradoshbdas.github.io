@@ -1,7 +1,7 @@
 <nav class="nav">
   <div class="container nav-inner">
     <div class="brand-wrap">
-      <a href="#home" class="brand">{{ .Site.Data.nav.brand }}</a>
+      <a href="{{ "/" | relURL }}" class="brand">{{ .Site.Data.nav.brand }}</a>
 
       <div class="brand-icons" aria-label="Affiliations">
         <a
@@ -28,7 +28,7 @@
 
     <div class="nav-links">
       {{ range .Site.Data.nav.items }}
-        <a href="{{ .href }}">{{ .label }}</a>
+        <a href="{{ .href | relURL }}" {{ if eq (trim .href "/") (trim $.RelPermalink "/") }}aria-current="page"{{ end }}>{{ .label }}</a>
       {{ end }}
     </div>
 
@@ -67,7 +67,7 @@
 
   <nav class="mobile-menu-links" aria-label="Mobile navigation">
     {{ range .Site.Data.nav.items }}
-      <a href="{{ .href }}">{{ .label }}</a>
+      <a href="{{ .href | relURL }}" {{ if eq (trim .href "/") (trim $.RelPermalink "/") }}aria-current="page"{{ end }}>{{ .label }}</a>
     {{ end }}
   </nav>
 

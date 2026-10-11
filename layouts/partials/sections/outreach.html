@@ -1,0 +1,43 @@
+{{ $outreach := .Site.Data.outreach }}
+<section id="outreach" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $outreach.title }}</h2>
+        <p>{{ $outreach.intro }}</p>
+      </div>
+      <article class="card markdown-body">
+        <div class="outreach-layout">
+          <div class="outreach-featured">
+            <div class="outreach-subhead">{{ $outreach.featured_title }}</div>
+            <div class="outreach-featured-grid">
+              {{ range $outreach.featured }}
+              <article class="outreach-feature-card">
+                <div class="outreach-feature-top"><span class="outreach-icon">{{ .icon }}</span><span class="outreach-chip">{{ .chip }}</span><span class="outreach-year">{{ .year }}</span></div>
+                <h3 class="outreach-feature-title">{{ .title }}</h3>
+                <p class="outreach-org">{{ .org }}</p>
+                <p class="outreach-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </div>
+          {{ range $outreach.groups }}
+          <section class="outreach-group">
+            <h2 class="outreach-group-title">{{ .title }}</h2>
+            <div class="outreach-list">
+              {{ range .items }}
+              <article class="outreach-card">
+                <div class="outreach-card-top"><span class="outreach-icon">{{ .icon }}</span><span class="outreach-chip">{{ .chip }}</span><span class="outreach-year">{{ .year }}</span></div>
+                <h3 class="outreach-title">{{ .title }}</h3>
+                <p class="outreach-org">{{ .org }}</p>
+                <p class="outreach-desc">{{ .desc }}</p>
+              </article>
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

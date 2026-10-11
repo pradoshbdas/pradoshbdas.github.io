@@ -1,0 +1,16 @@
+{{ $gallery := .Site.Data.gallery }}
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-shell">
+      <div class="section-head">
+        <h2>{{ $gallery.title }}</h2>
+        <p>{{ $gallery.intro }}</p>
+      </div>
+      <div class="gallery" id="gallery-grid">
+        {{ range $gallery.images }}
+        <div class="tile"><img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" decoding="async"></div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
