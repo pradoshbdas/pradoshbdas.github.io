@@ -35,6 +35,15 @@ Implementing “The Cannon” data-driven framework to determine stellar paramet
 </div>
 
 <div class="timeline-item">
+<div class="timeline-year">2025B &amp; 2026B</div>
+<div class="timeline-content">
+<h3>Observing Experience — GALAH 2</h3>
+<p>Co-Investigator / Observer, Anglo-Australian Telescope, Siding Spring Observatory, Australia.</p>
+<p>2025B (R/2025B/01): HERMES+2dF and Veloce. 2026B (R/2026B/05): Veloce.</p>
+</div>
+</div>
+
+<div class="timeline-item">
 <div class="timeline-year">Aug 2017 - May 2022</div>
 <div class="timeline-content">
 <h3>Bachelor & Master of Science (BS-MS Dual Degree) (Major in Physics, Specialization in Astronomy)</h3>

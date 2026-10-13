@@ -2,16 +2,6 @@
   {{ partial "nav.html" . }}
   <main id="main-content">
     {{ partial "sections/home.html" . }}
-    <section class="section portfolio-home-links" aria-label="Explore portfolio">
-      <div class="container"><div class="section-shell">
-        <div class="section-head"><h2>Explore my work</h2><p class="muted">Research, publications, academic activities and more.</p></div>
-        <div class="portfolio-destination-grid">
-          {{ range slice (dict "label" "About Me" "path" "/about/" "summary" "Background, academic journey and contact") (dict "label" "Research" "path" "/research/" "summary" "Explore current and past research projects") (dict "label" "Publications" "path" "/publications/" "summary" "Scientific articles and research outputs") (dict "label" "Conferences" "path" "/conferences/" "summary" "Talks, presentations and seminars") (dict "label" "Awards & Honors" "path" "/awards/" "summary" "Fellowships, distinctions and recognition") (dict "label" "Outreach" "path" "/outreach/" "summary" "Science communication and public engagement") }}
-          <a class="card portfolio-destination" href="{{ .path | relURL }}"><h3>{{ .label }} <span aria-hidden="true">↗</span></h3><p>{{ .summary }}</p></a>
-          {{ end }}
-        </div>
-      </div></div>
-    </section>
     {{ partial "footer.html" . }}
   </main>
 {{ end }}

@@ -1,0 +1,11 @@
+
+.portfolio-photo-section{margin:2rem 0;padding:clamp(1.2rem,3vw,2rem);border:1px solid var(--border-color,rgba(145,160,180,.25));border-radius:20px}
+.portfolio-photo-section h3{font-size:clamp(1.3rem,2vw,1.75rem);margin:0 0 .5rem}
+.portfolio-photo-section>.muted{margin:0 0 1.2rem}
+.portfolio-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.portfolio-photo-grid--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.portfolio-photo-placeholder{min-height:185px;border:1.5px dashed rgba(145,160,180,.65);border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.65rem;padding:1rem;background:rgba(125,145,175,.07)}
+.portfolio-photo-placeholder span{font-size:2.2rem;opacity:.55}
+.portfolio-photo-placeholder strong{font-size:.9rem;font-weight:650}
+.portfolio-photo-placeholder small{font-size:.75rem;opacity:.6}
+@media(max-width:700px){.portfolio-photo-grid,.portfolio-photo-grid--two{grid-template-columns:1fr}.portfolio-photo-placeholder{min-height:155px}}

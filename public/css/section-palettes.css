@@ -1,0 +1,42 @@
+/* Dedicated colour identities. Home and About intentionally unchanged. */
+/* Values used by existing backgrounds, links, controls, and new subtle glow. */
+html[data-portfolio-page="research"] {--page-rgb:50,187,181;--page-accent:#49d6c4;--page-ink:#064e4c;--page-tint:#dff8f3;}
+html[data-portfolio-page="publications"] {--page-rgb:169,140,244;--page-accent:#c0a5ff;--page-ink:#5c36a2;--page-tint:#f0e9ff;}
+html[data-portfolio-page="conferences"] {--page-rgb:241,159,91;--page-accent:#ffb971;--page-ink:#a14d12;--page-tint:#fff0dd;}
+html[data-portfolio-page="awards"] {--page-rgb:231,181,83;--page-accent:#f4cb76;--page-ink:#8f5c0c;--page-tint:#fff4d8;}
+html[data-portfolio-page="gallery"] {--page-rgb:229,135,175;--page-accent:#ffa8cc;--page-ink:#9c3363;--page-tint:#ffe6f0;}
+html[data-portfolio-page="outreach"] {--page-rgb:117,188,115;--page-accent:#a0e49c;--page-ink:#2d702f;--page-tint:#e7f8e2;}
+html[data-portfolio-page="contact"] {--page-rgb:118,178,234;--page-accent:#9acbff;--page-ink:#28578d;--page-tint:#e6f2ff;}
+html[data-portfolio-page="research"] body,html[data-portfolio-page="publications"] body,
+html[data-portfolio-page="conferences"] body,html[data-portfolio-page="awards"] body,
+html[data-portfolio-page="gallery"] body,html[data-portfolio-page="outreach"] body,
+html[data-portfolio-page="contact"] body {--accent:var(--page-accent);--accent-soft:rgba(var(--page-rgb),.16);}
+/* Distinct atmosphere without replacing background video or site typography. */
+html[data-portfolio-page]:not([data-portfolio-page="about"]):not([data-portfolio-page="home"]) main.portfolio-inner-page::before {content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse 70% 55% at 88% 12%,rgba(var(--page-rgb,100,150,200),.14),transparent 75%);}
+html[data-portfolio-page]:not([data-portfolio-page="about"]):not([data-portfolio-page="home"]) main.portfolio-inner-page .section-shell {border-top:3px solid rgba(var(--page-rgb,100,150,200),.64);}
+html[data-portfolio-page]:not([data-portfolio-page="about"]):not([data-portfolio-page="home"]) main.portfolio-inner-page .section-head h2 {text-decoration:underline;text-decoration-color:rgba(var(--page-rgb,100,150,200),.65);text-underline-offset:.22em;text-decoration-thickness:3px;}
+html[data-portfolio-page]:not([data-portfolio-page="about"]):not([data-portfolio-page="home"]) main.portfolio-inner-page a:hover {color:var(--page-accent);}
+html[data-portfolio-page] .nav-links a[aria-current="page"],html[data-portfolio-page] .mobile-menu-links a[aria-current="page"]{color:var(--page-accent);}
+html[data-portfolio-page="research"] .featured-paper {border-color:rgba(var(--page-rgb),.30);background:linear-gradient(130deg,rgba(var(--page-rgb),.095),rgba(var(--page-rgb),.018));}
+html[data-portfolio-page="research"] .featured-paper-meta {color:var(--page-accent);opacity:1;}
+html[data-portfolio-page="conferences"] .engagement-card {border-color:rgba(var(--page-rgb),.36);background:rgba(var(--page-rgb),.10);}
+html[data-portfolio-page="awards"] .recognition-feature {border-color:rgba(var(--page-rgb),.40);background:linear-gradient(140deg,rgba(var(--page-rgb),.17),rgba(var(--page-rgb),.035));}
+html[data-portfolio-page="conferences"] .explorer-filter.is-active,html[data-portfolio-page="awards"] .explorer-filter.is-active{background:var(--page-accent);border-color:var(--page-accent);color:#151923;}
+html[data-portfolio-page="conferences"] .engagement-type,html[data-portfolio-page="awards"] .recognition-chip,html[data-portfolio-page="awards"] .recognition-row-type{color:var(--page-accent);}
+/* Light theme requires darker accents for readable text. */
+html[data-theme="light"][data-portfolio-page] body {--accent:var(--page-ink);--accent-soft:var(--page-tint);}
+html[data-theme="light"][data-portfolio-page] .nav-links a[aria-current="page"],html[data-theme="light"][data-portfolio-page] .mobile-menu-links a[aria-current="page"],html[data-theme="light"][data-portfolio-page] .featured-paper-meta,html[data-theme="light"][data-portfolio-page] .engagement-type,html[data-theme="light"][data-portfolio-page] .recognition-chip,html[data-theme="light"][data-portfolio-page] .recognition-row-type {color:var(--page-ink);}
+html[data-theme="light"][data-portfolio-page] main.portfolio-inner-page a:hover {color:var(--page-ink);}
+
+/* Apply the strong accent-and-card language from Conferences/Awards to the other internal pages. */
+html[data-portfolio-page="research"] .featured-paper-copy h3,
+html[data-portfolio-page="publications"] .section-head h2,
+html[data-portfolio-page="gallery"] .section-head h2,
+html[data-portfolio-page="contact"] .section-head h2{color:var(--page-accent)}
+html[data-theme="light"][data-portfolio-page="research"] .featured-paper-copy h3,
+html[data-theme="light"][data-portfolio-page="publications"] .section-head h2,
+html[data-theme="light"][data-portfolio-page="gallery"] .section-head h2,
+html[data-theme="light"][data-portfolio-page="contact"] .section-head h2{color:var(--page-ink)}
+html[data-portfolio-page="publications"] .card,
+html[data-portfolio-page="gallery"] .card,
+html[data-portfolio-page="contact"] .card{border-color:rgba(var(--page-rgb),.4);background:linear-gradient(135deg,rgba(var(--page-rgb),.12),rgba(var(--page-rgb),.025))}

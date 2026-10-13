@@ -27,3 +27,16 @@ html[data-portfolio-page="conferences"] .engagement-type,html[data-portfolio-pag
 html[data-theme="light"][data-portfolio-page] body {--accent:var(--page-ink);--accent-soft:var(--page-tint);}
 html[data-theme="light"][data-portfolio-page] .nav-links a[aria-current="page"],html[data-theme="light"][data-portfolio-page] .mobile-menu-links a[aria-current="page"],html[data-theme="light"][data-portfolio-page] .featured-paper-meta,html[data-theme="light"][data-portfolio-page] .engagement-type,html[data-theme="light"][data-portfolio-page] .recognition-chip,html[data-theme="light"][data-portfolio-page] .recognition-row-type {color:var(--page-ink);}
 html[data-theme="light"][data-portfolio-page] main.portfolio-inner-page a:hover {color:var(--page-ink);}
+
+/* Apply the strong accent-and-card language from Conferences/Awards to the other internal pages. */
+html[data-portfolio-page="research"] .featured-paper-copy h3,
+html[data-portfolio-page="publications"] .section-head h2,
+html[data-portfolio-page="gallery"] .section-head h2,
+html[data-portfolio-page="contact"] .section-head h2{color:var(--page-accent)}
+html[data-theme="light"][data-portfolio-page="research"] .featured-paper-copy h3,
+html[data-theme="light"][data-portfolio-page="publications"] .section-head h2,
+html[data-theme="light"][data-portfolio-page="gallery"] .section-head h2,
+html[data-theme="light"][data-portfolio-page="contact"] .section-head h2{color:var(--page-ink)}
+html[data-portfolio-page="publications"] .card,
+html[data-portfolio-page="gallery"] .card,
+html[data-portfolio-page="contact"] .card{border-color:rgba(var(--page-rgb),.4);background:linear-gradient(135deg,rgba(var(--page-rgb),.12),rgba(var(--page-rgb),.025))}

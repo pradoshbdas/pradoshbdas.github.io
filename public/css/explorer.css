@@ -1,0 +1,34 @@
+/* Conferences and awards: compact, filterable editorial layouts */
+.portfolio-explorer,.recognition-shell{padding:clamp(1.1rem,3vw,2rem)!important;overflow:hidden}
+.explorer-heading,.recognition-browser-title{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.4rem}
+.explorer-eyebrow{display:block;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:750;opacity:.68;margin-bottom:.5rem}
+.explorer-heading h3,.recognition-browser-title h3{font-size:clamp(1.3rem,2.3vw,1.9rem);margin:0;line-height:1.25}
+.explorer-count{font-size:.79rem;opacity:.67;white-space:nowrap}.recognition-star{font-size:2.4rem;opacity:.7}
+.explorer-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.5rem}
+.explorer-filter{appearance:none;cursor:pointer;border:1px solid rgba(145,166,207,.33);border-radius:100px;background:transparent;color:inherit;padding:.55rem .94rem;font:inherit;font-size:.84rem;transition:background .18s,border-color .18s,transform .18s}
+.explorer-filter:hover{border-color:currentColor;transform:translateY(-1px)}.explorer-filter:focus-visible{outline:3px solid #7aaeff;outline-offset:3px}
+.explorer-filter.is-active{background:#3769bb;color:#fff;border-color:#3769bb}
+.explorer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.engagement-card{display:flex;flex-direction:column;min-height:180px;padding:1.25rem;border:1px solid rgba(145,166,207,.22);border-radius:17px;background:rgba(114,147,202,.065);transition:transform .2s,border-color .2s}
+.engagement-card:hover{transform:translateY(-3px);border-color:rgba(120,165,241,.6)}
+.engagement-top,.recognition-feature-top{display:flex;align-items:center;justify-content:space-between;gap:.7rem;margin-bottom:1rem;font-size:.76rem}
+.engagement-type,.recognition-chip{color:#85b5ff;font-weight:700;letter-spacing:.025em}.engagement-year{opacity:.65}
+.engagement-card h3{font-size:1.07rem;line-height:1.45;margin:0 0 1rem;font-weight:650}
+.engagement-place{margin:auto 0 0;font-size:.84rem;opacity:.75;line-height:1.55}
+.recognition-featured-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.recognition-feature{padding:1.35rem;border:1px solid rgba(145,166,207,.27);border-radius:18px;background:linear-gradient(145deg,rgba(82,133,219,.14),rgba(125,150,196,.035))}
+.recognition-feature-top{opacity:.82}.recognition-feature h3{font-size:1.13rem;line-height:1.45;margin:0 0 .7rem}.recognition-org{font-size:.89rem;opacity:.85;margin:0 0 .8rem}.recognition-desc{font-size:.87rem;line-height:1.65;opacity:.75;margin:0}
+.recognition-browser{margin-top:2.4rem;padding-top:1.8rem;border-top:1px solid rgba(145,166,207,.25)}
+.recognition-browser-title{align-items:end}.recognition-browser-title>p{font-size:.86rem;opacity:.68;margin:0}
+.recognition-list{border-top:1px solid rgba(145,166,207,.2)}
+.recognition-row{display:grid;grid-template-columns:110px minmax(0,1fr);gap:1.1rem;padding:1.1rem .25rem;border-bottom:1px solid rgba(145,166,207,.2)}
+.recognition-row-year{font-weight:700;font-variant-numeric:tabular-nums;opacity:.7;font-size:.85rem;padding-top:.25rem}
+.recognition-row-type{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#85b5ff;font-weight:700}
+.recognition-row h4{margin:.25rem 0;font-size:1.02rem;line-height:1.45}.recognition-row p{margin:.25rem 0;font-size:.87rem;opacity:.8;line-height:1.6}.recognition-row-detail{opacity:.7!important}
+[data-conference-year][hidden],[data-award-category][hidden],.explorer-empty[hidden]{display:none!important}
+[data-theme="light"] .engagement-type,[data-theme="light"] .recognition-chip,[data-theme="light"] .recognition-row-type{color:#245caa}
+[data-theme="light"] .engagement-card{background:rgba(50,96,170,.045)}
+[data-theme="light"] .recognition-feature{background:linear-gradient(145deg,rgba(72,130,210,.09),rgba(90,120,175,.02))}
+@media(max-width:900px){.explorer-grid,.recognition-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recognition-featured-grid .recognition-feature:last-child{grid-column:1/-1}}
+@media(max-width:580px){.explorer-grid,.recognition-featured-grid{grid-template-columns:1fr}.recognition-featured-grid .recognition-feature:last-child{grid-column:auto}.explorer-heading,.recognition-browser-title{align-items:start;flex-direction:column}.engagement-card{min-height:145px}.recognition-row{grid-template-columns:68px minmax(0,1fr);gap:.65rem}}
+@media(prefers-reduced-motion:reduce){.engagement-card,.explorer-filter{transition:none}}

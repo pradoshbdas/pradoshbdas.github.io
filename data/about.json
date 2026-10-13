@@ -12,30 +12,37 @@
         "Ph.D. Candidate (Astrophysics & Astronomy)",
         "(Australian Government RTP Scholar)"
       ]
-    } ,
-
+    },
     {
       "key": "Affiliations",
       "values": [
         "Macquarie University (MQ), Australia",
         "European Southern Observatory, Germany"
       ]
-    } ,
-
+    },
     {
       "key": "Research Interests",
       "values": [
         "Galactic Archaeology -- Chemical Tagging; Accreted Stellar Populations; Light (Li) & Neutron Capture elemental abundances"
       ]
-    } ,
-
+    },
     {
       "key": "Methods",
       "values": [
         "Machine Learning, Data-driven Modelling, Stellar Spectroscopy"
       ]
-    } 
-
-
+    },
+    {
+      "key": "PhD Thesis",
+      "values": [
+        "Data-Driven Galactic Archaeology: Tracing the Chemodynamical Structure and Accretion History of the Milky Way in an Era of Large Spectroscopic Surveys"
+      ]
+    },
+    {
+      "key": "PhD Supervisors",
+      "values": [
+        "Prof. Daniel Zucker; A/Prof. Gayandhi De Silva; Dr. Francesca Primas"
+      ]
+    }
   ]
 }
