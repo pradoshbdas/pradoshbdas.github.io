@@ -1,0 +1,91 @@
+ .hugo_build.lock                 |    0
+ public/.nojekyll                 |    0
+ public/about/index.html          |  347 [31m-[m
+ public/about/index.xml           |   11 [31m-[m
+ public/awards/index.html         |  333 [31m-[m
+ public/awards/index.xml          |   11 [31m-[m
+ public/background.mp4            |  Bin [31m32993140[m -> [32m0[m bytes
+ public/categories/index.xml      |   11 [31m-[m
+ public/conferences/index.html    |  335 [31m-[m
+ public/conferences/index.xml     |   11 [31m-[m
+ public/contact/index.html        |  283 [31m-[m
+ public/contact/index.xml         |   11 [31m-[m
+ public/css/base.css              |  126 [31m-[m
+ public/css/buttons.css           |  157 [31m-[m
+ public/css/cards.css             |  220 [31m-[m
+ public/css/explorer.css          |   34 [31m-[m
+ public/css/featured-research.css |   34 [31m-[m
+ public/css/footer.css            |   92 [31m-[m
+ public/css/gallery.css           |   30 [31m-[m
+ public/css/hero.css              |  250 [31m-[m
+ public/css/layout.css            |  219 [31m-[m
+ public/css/loader.css            |   91 [31m-[m
+ public/css/markdown.css          |   65 [31m-[m
+ public/css/nav.css               |  346 [31m-[m
+ public/css/page-transitions.css  |   41 [31m-[m
+ public/css/pages.css             |   16 [31m-[m
+ public/css/portfolio-photos.css  |   11 [31m-[m
+ public/css/research.css          |  121 [31m-[m
+ public/css/responsive.css        |  374 [31m-[m
+ public/css/section-palettes.css  |   42 [31m-[m
+ public/css/styles.css            | 3535 [31m---------[m
+ public/css/theme-toggle.css      |   21 [31m-[m
+ public/css/timeline.css          | 1445 [31m----[m
+ public/eso-dark.png              |  Bin [31m524184[m -> [32m0[m bytes
+ public/eso-light.png             |  Bin [31m524184[m -> [32m0[m bytes
+ public/favicon.png               |  Bin [31m66056[m -> [32m0[m bytes
+ public/files/CV.pdf              |  Bin [31m146280[m -> [32m0[m bytes
+ public/files/icons/github.svg    |   17 [31m-[m
+ .../icons/googlescholar.svg      |    7 [31m-[m
+ public/files/icons/linkedin.svg  |   14 [31m-[m
+ .../files/icons/researchgate.svg |   14 [31m-[m
+ .../files/images/background.jpg  |  Bin [31m562416[m -> [32m0[m bytes
+ .../files/images/background.webp |  Bin [31m127036[m -> [32m0[m bytes
+ .../files/images/gallery/1.jpeg  |  Bin [31m416630[m -> [32m0[m bytes
+ .../files/images/gallery/2.jpeg  |  Bin [31m223163[m -> [32m0[m bytes
+ .../files/images/gallery/3.jpeg  |  Bin [31m273426[m -> [32m0[m bytes
+ .../images/gallery/gallery1.jpg  |  Bin [31m9610[m -> [32m0[m bytes
+ .../images/gallery/gallery2.jpeg |  Bin [31m34383[m -> [32m0[m bytes
+ .../images/gallery/gallery3.jpg  |  Bin [31m38547[m -> [32m0[m bytes
+ public/files/images/profile.jpg  |  Bin [31m2102267[m -> [32m0[m bytes
+ public/files/images/profile.webp |  Bin [31m61822[m -> [32m0[m bytes
+ .../gaia-eso-ba-eu-schematic.svg |   33 [31m-[m
+ ...second-figure-placeholder.svg |    1 [31m-[m
+ .../galah-800k-additional.webp   |  Bin [31m106580[m -> [32m0[m bytes
+ .../galah-800k.webp              |  Bin [31m59938[m -> [32m0[m bytes
+ ...utron-capture-additional.webp |  Bin [31m21884[m -> [32m0[m bytes
+ .../galah-neutron-capture.webp   |  Bin [31m20192[m -> [32m0[m bytes
+ .../red-giant-spectra.webp       |  Bin [31m124086[m -> [32m0[m bytes
+ public/files/staf169.pdf         |  Bin [31m23422106[m -> [32m0[m bytes
+ public/files/staf916.pdf         |  Bin [31m3236064[m -> [32m0[m bytes
+ public/files/stag1142.pdf        |  Bin [31m16771818[m -> [32m0[m bytes
+ public/gallery/index.html        |  248 [31m-[m
+ public/gallery/index.xml         |   11 [31m-[m
+ public/index.html                |  316 [31m-[m
+ public/index.xml                 |   46 [31m-[m
+ public/js/astro-facts.js         |  125 [31m-[m
+ public/js/explorer.js            |   32 [31m-[m
+ public/js/main.js                |  210 [31m-[m
+ public/js/partial-loader.js      |  110 [31m-[m
+ public/js/site-init.js           |   79 [31m-[m
+ public/js/solar-loader.js        |  164 [31m-[m
+ public/js/sun-zoom-transition.js |   46 [31m-[m
+ public/js/theme-toggle.js        |   67 [31m-[m
+ public/macquarie-dark.png        |  Bin [31m150678[m -> [32m0[m bytes
+ public/macquarie-light.png       |  Bin [31m150678[m -> [32m0[m bytes
+ public/outreach/index.html       |  364 [31m-[m
+ public/outreach/index.xml        |   11 [31m-[m
+ public/publications/index.html   |  393 [31m-[m
+ public/publications/index.xml    |   11 [31m-[m
+ .../index.html                   |  293 [31m-[m
+ .../chemical-tagging/index.html  |  288 [31m-[m
+ .../index.html                   |  291 [31m-[m
+ public/research/index.html       |  280 [31m-[m
+ public/research/index.xml        |   46 [31m-[m
+ .../ml-spectroscopy/index.html   |  288 [31m-[m
+ .../research/stellar/index.html  |  286 [31m-[m
+ public/robots.txt                |    1 [31m-[m
+ public/sitemap.xml               |   37 [31m-[m
+ public/tags/index.xml            |   11 [31m-[m
+ static/css/featured-research.css |   23 [32m+[m[31m-[m
+ 90 files changed, 7 insertions(+), 12779 deletions(-)

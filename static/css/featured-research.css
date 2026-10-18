@@ -33,21 +33,6 @@
 .featured-paper-placeholder-hint{font-size:.78rem;opacity:.6}
 @media(max-width:760px){.featured-paper-placeholder-inner{min-height:150px}}
 
-<!--
-/* Wider Research page only */
-@media (min-width: 981px) {
-  .featured-research-page #research > .container {
-    width: min(calc(100% - 3rem), 1600px);
-    max-width: none;
-  }
-
-  .featured-research-page #research .section-shell {
-    max-width: none;
-  }
-}
--->
-
-
 /* ==========================================
    RESEARCH PAGE — BALANCED DESKTOP LAYOUT
    ========================================== */
@@ -56,7 +41,7 @@
 
   /* Wider research page */
   .featured-research-page #research > .container {
-    width: min(calc(100% - 3rem), 1450px);
+    width: min(calc(100% - 3rem), 1600px);
     max-width: none;
   }
 
@@ -81,4 +66,10 @@
     object-fit: contain;
   }
 
+}
+
+/* Reduce blank space between the navbar and Research heading only.
+   Keep the main page's navbar clearance so content is not hidden. */
+main.featured-research-page > #research {
+  padding-top: 0;
 }
