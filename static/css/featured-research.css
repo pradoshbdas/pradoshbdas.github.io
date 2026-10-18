@@ -38,16 +38,19 @@
    ========================================== */
 
 @media (min-width: 981px) {
-
-  /* Wider research page */
   .featured-research-page #research > .container {
     width: min(calc(100% - 3rem), 1200px);
     max-width: none;
   }
 
   .featured-research-page #research .section-shell {
-    max-width: none;
+    max-width: 100%;
   }
+
+  .featured-research-page .featured-research-heading {
+    max-width: 100%;
+  }
+}
 
   /* Restrict figure column width */
   .featured-research-page .featured-paper-visual-stack {
