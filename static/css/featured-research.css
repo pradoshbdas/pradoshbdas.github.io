@@ -46,3 +46,39 @@
   }
 }
 -->
+
+
+/* ==========================================
+   RESEARCH PAGE — BALANCED DESKTOP LAYOUT
+   ========================================== */
+
+@media (min-width: 981px) {
+
+  /* Wider research page */
+  .featured-research-page #research > .container {
+    width: min(calc(100% - 3rem), 1450px);
+    max-width: none;
+  }
+
+  .featured-research-page #research .section-shell {
+    max-width: none;
+  }
+
+  /* Restrict figure column width */
+  .featured-research-page .featured-paper-visual-stack {
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Figures retain their original aspect ratios */
+  .featured-research-page .featured-paper-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+}
