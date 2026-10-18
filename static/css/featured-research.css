@@ -41,7 +41,7 @@
 
   /* Wider research page */
   .featured-research-page #research > .container {
-    width: min(calc(100% - 3rem), 1400px);
+    width: min(calc(100% - 3rem), 1200px);
     max-width: none;
   }
 
