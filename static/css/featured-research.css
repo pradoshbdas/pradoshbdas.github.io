@@ -74,5 +74,5 @@
 /* Reduce blank space between the navbar and Research heading only.
    Keep the main page's navbar clearance so content is not hidden. */
 main.featured-research-page > #research {
-  padding-top: 0;
+  padding-top: -20;
 }
