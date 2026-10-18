@@ -17,21 +17,21 @@
       "key": "Affiliations",
       "values": [
         "Macquarie University (MQ), Australia",
-        "European Southern Observatory, Germany"
+        "European Southern Observatory (ESO), Germany"
       ]
     },
     {
       "key": "Research Interests",
       "values": [
-        "Galactic Archaeology -- Chemical Tagging; Accreted Stellar Populations; Light (Li) & Neutron Capture elemental abundances"
+        "Galactic Archaeology -- Chemical Tagging; Accreted Stellar Populations; Light (Li) & Neutron Capture elemental abundances; Data-driven Modelling for Stellar Spectroscopy"
       ]
     },
-    {
+    <!--{
       "key": "Methods",
       "values": [
         "Machine Learning, Data-driven Modelling, Stellar Spectroscopy"
       ]
-    },
+    },-->
     {
       "key": "PhD Thesis",
       "values": [
