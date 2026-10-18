@@ -27,13 +27,6 @@
       ]
     },
     {
-      "_disabled": true,
-      "key": "Methods",
-      "values": [
-        "Machine Learning, Data-driven Modelling, Stellar Spectroscopy"
-      ]
-    },
-    {
       "key": "PhD Thesis",
       "values": [
         "Data-Driven Galactic Archaeology: Tracing the Chemodynamical Structure and Accretion History of the Milky Way in an Era of Large Spectroscopic Surveys"
@@ -45,5 +38,11 @@
         "Prof. Daniel Zucker; A/Prof. Gayandhi De Silva; Dr. Francesca Primas"
       ]
     }
-  ]
+  ],
+  "_saved_methods": {
+    "key": "Methods",
+    "values": [
+      "Machine Learning, Data-driven Modelling, Stellar Spectroscopy"
+    ]
+  }
 }
