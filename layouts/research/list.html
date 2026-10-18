@@ -1,5 +1,66 @@
 {{ define "body" }}
 {{ partial "nav.html" . }}
+
+<style>
+/* ==========================================
+   RESEARCH PAGE — TEXT JUSTIFICATION
+   ========================================== */
+
+.featured-research-page .featured-paper-copy p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   RESEARCH PAGE — SCIENTIFIC FIGURES
+   ========================================== */
+
+/* Stack figures vertically */
+.featured-research-page .featured-paper-visual-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Remove white containers and decorative frames */
+.featured-research-page .featured-paper-visual:not(.featured-paper-placeholder) {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+/* Display scientific figures at natural proportions */
+.featured-research-page .featured-paper-visual img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+</style>
+
 <main id="main-content" class="portfolio-inner-page featured-research-page">
   <section id="research" class="section">
     <div class="container">
