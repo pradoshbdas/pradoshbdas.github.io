@@ -1427,6 +1427,9 @@ h2 {
   margin: 0 0 1rem;
   max-width: 62ch;
   line-height: 1.75;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .about-summary-card {
