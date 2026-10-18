@@ -26,12 +26,13 @@
         "Galactic Archaeology -- Chemical Tagging; Accreted Stellar Populations; Light (Li) & Neutron Capture elemental abundances; Data-driven Modelling for Stellar Spectroscopy"
       ]
     },
-    <!--{
+    {
+      "_disabled": true,
       "key": "Methods",
       "values": [
         "Machine Learning, Data-driven Modelling, Stellar Spectroscopy"
       ]
-    },-->
+    },
     {
       "key": "PhD Thesis",
       "values": [
