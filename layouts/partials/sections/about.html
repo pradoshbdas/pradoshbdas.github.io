@@ -8,9 +8,22 @@
           <h2>{{ $about.title }}</h2>
           {{ range $about.paragraphs }}<p class="muted">{{ . }}</p>{{ end }}
         </div>
+        
         <aside class="about-summary-card">
           <div class="about-summary-label">{{ $about.summary_label }}</div>
+        
+          <!-- Small profile photo -->
+          <div class="about-summary-photo">
+            <img
+              src="{{ .Site.Data.hero.portrait.src }}"
+              alt="Pradosh Barun Das"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        
           <div class="about-summary-list">
+
             {{ range $about.summary_items }}
             <div class="about-summary-item">
               <span class="about-summary-key">{{ .key }}</span>
