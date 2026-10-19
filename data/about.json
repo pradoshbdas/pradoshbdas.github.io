@@ -35,14 +35,14 @@
         "Data-Driven Galactic Archaeology: Tracing the Chemodynamical Structure and Accretion History of the Milky Way in an Era of Large Spectroscopic Surveys"
       ]
     },
-    {
-      "key": "PhD Supervisors",
-      "values": [
-        "Prof. Daniel Zucker 
-        A/Prof. Gayandhi De Silva 
-        Dr. Francesca Primas"
-      ]
-    }
+      {
+    "key": "PhD Supervisors",
+    "values": [
+      "Prof. Daniel Zucker",
+      "A/Prof. Gayandhi De Silva",
+      "Dr. Francesca Primas"
+    ]
+  }
   ],
   "_saved_methods": {
     "key": "Methods",
