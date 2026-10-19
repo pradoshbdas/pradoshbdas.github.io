@@ -1446,6 +1446,27 @@ h2 {
   overflow: hidden;
 }
 
+
+/* Profile photo inside Profile Snapshot */
+.about-summary-photo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0.3rem 0 1.3rem;
+}
+
+.about-summary-photo img {
+  width: 115px;
+  height: 115px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
 .about-summary-card::before {
   content: "";
   position: absolute;
