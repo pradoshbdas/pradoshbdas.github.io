@@ -1,6 +1,7 @@
 /* Dedicated portfolio pages — retains all existing colors, styles and hero. */
-.portfolio-inner-page{padding-top:clamp(70px,8vw,108px);min-height:100vh;}
-.portfolio-inner-page>.section{padding-top:clamp(24px,4vw,56px);}
+/* Compact spacing on internal pages */
+.portfolio-inner-page {padding-top: 20px;min-height: 100vh;}
+.portfolio-inner-page > .section {padding-top: 0;}
 .portfolio-home-links{padding-bottom:clamp(45px,7vw,100px);}
 .portfolio-destination-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
 .portfolio-destination{display:block;padding:1.5rem;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s;}
