@@ -15,3 +15,39 @@
 /* Disable full-screen scroll snapping on content-first pages. */
 main.portfolio-inner-page{scroll-snap-type:none;scroll-padding-top:0;}
 main.portfolio-inner-page .section{scroll-snap-align:none;min-height:0;}
+
+/* About Me biography — dark theme */
+html[data-theme="dark"][data-portfolio-page="about"]
+#about .about-copy h2 {
+  color: #8edcf7;
+}
+
+html[data-theme="dark"][data-portfolio-page="about"]
+#about .about-copy p.muted {
+  color: #dce5f5;
+}
+
+html[data-theme="dark"][data-portfolio-page="about"]
+#about .about-copy p.muted:first-of-type {
+  color: #b9ceff;
+  border-left: 3px solid #8edcf7;
+  padding-left: 16px;
+}
+
+/* About Me biography — light theme */
+html[data-theme="light"][data-portfolio-page="about"]
+#about .about-copy h2 {
+  color: #17658e;
+}
+
+html[data-theme="light"][data-portfolio-page="about"]
+#about .about-copy p.muted {
+  color: #34445d;
+}
+
+html[data-theme="light"][data-portfolio-page="about"]
+#about .about-copy p.muted:first-of-type {
+  color: #3659a2;
+  border-left: 3px solid #17658e;
+  padding-left: 16px;
+}
