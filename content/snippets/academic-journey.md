@@ -13,7 +13,7 @@ _build:
 <div class="timeline-content">
 <h3>Ph.D. in Astrophysics & Astronomy (RTP Scholar)</h3>
 <p>
-<a href="https://www.mq.edu.au/" target="_blank" rel="noopener">Macquarie University, Sydney, Australia</a>,
+<a href="https://www.mq.edu.au/" target="_blank" rel="noopener">Macquarie University, Sydney, Australia</a>
 </p>
 <p>
       Doctoral research in Galactic Archaeology, using machine
@@ -28,7 +28,7 @@ _build:
 </div>
 
 <div class="timeline-item">
-<div class="timeline-year">September 2025 - Present</div>
+<div class="timeline-year">September - December 2025</div>
 <div class="timeline-content">
 <h3>Early-Career Scientific Researcher (ESO Garching)</h3>
 <p>
@@ -52,7 +52,7 @@ Investigated the neutron-capture enhancements in the young open clusters using t
 <div class="timeline-item">
 <div class="timeline-year">Aug 2017 - May 2022</div>
 <div class="timeline-content">
-<h3>Bachelor & Master of Science (BS-MS Dual Degree) (Major in Physics, Specialization in Astronomy)</h3>
+<h3>Bachelor & Master of Science (BS-MS) (Major in Physics, Specialization in Astronomy)</h3>
 <p>
 <a href="https://www.iisermohali.ac.in/" target="_blank" rel="noopener">Indian Institute of Science Education and Research (IISER) Mohali, India</a>
 </p>
