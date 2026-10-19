@@ -3536,3 +3536,22 @@ body::before {
 .gallery img {
   loading: lazy;
 }
+
+
+
+/* Wider About page - desktop only */
+@media (min-width: 981px) {
+
+  #about > .container {
+    width: min(calc(100% - 3rem), 1400px);
+  }
+
+  #about .section-shell {
+    max-width: 1400px;
+  }
+
+  #about .about-copy p {
+    max-width: 95ch;
+  }
+
+}
