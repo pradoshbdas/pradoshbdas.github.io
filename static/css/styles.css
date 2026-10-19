@@ -3539,19 +3539,19 @@ body::before {
 
 
 
-/* Wider About page - desktop only */
+/* About page - balanced desktop width */
 @media (min-width: 981px) {
 
   #about > .container {
-    width: min(calc(100% - 3rem), 1400px);
+    width: min(calc(100% - 3rem), 1200px);
   }
 
   #about .section-shell {
-    max-width: 1400px;
+    max-width: 1200px;
   }
 
   #about .about-copy p {
-    max-width: 95ch;
+    max-width: 85ch;
   }
 
 }
