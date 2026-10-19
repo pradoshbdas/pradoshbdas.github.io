@@ -1457,8 +1457,8 @@ h2 {
 }
 
 .about-summary-photo img {
-  width: 115px;
-  height: 115px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   object-position: center 30%;
   border-radius: 50%;
