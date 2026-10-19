@@ -1,6 +1,3 @@
-window.startHeroFact assignment.
-You can replace your entire existing JavaScript with this code.
-
 (function () {
   const astroFacts = [
 
