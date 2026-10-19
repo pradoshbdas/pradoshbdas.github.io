@@ -117,7 +117,7 @@
         () => loaderTimeout,
         (t) => { loaderTimeout = t; }
       );
-    }, 2000);
+    }, 4000);
   }
 
   function stopAstroFacts() {
@@ -180,13 +180,16 @@
     });
   }
 
-  function startHeroFact() {
-    const heroEl = document.getElementById('hero-fact');
-    if (!heroEl) return;
-    showNextFact(heroEl);
-  }
+  let heroStarted = false;
 
-  window.startHeroFact = startHeroFact;
+  function startHeroFact() {
+  const heroEl = document.getElementById('hero-fact');
+
+  if (!heroEl || heroStarted) return;
+
+  heroStarted = true;
+  showNextFact(heroEl);
+  }
 
   window.startHeroFact = startHeroFact;
 })();
