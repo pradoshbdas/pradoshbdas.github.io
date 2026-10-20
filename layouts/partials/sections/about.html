@@ -38,10 +38,33 @@
       <section class="portfolio-photo-section" aria-labelledby="about-photos-title">
         <h3 id="about-photos-title">My research group</h3>
         <p class="muted">A glimpse of the people and collaborations behind the research.</p>
+        
         <div class="portfolio-photo-grid portfolio-photo-grid--two">
-          <div class="portfolio-photo-placeholder" role="img" aria-label="Research group photograph placeholder"><span aria-hidden="true">▧</span><strong>Research group photograph</strong><small>Image coming soon</small></div>
-          <div class="portfolio-photo-placeholder" role="img" aria-label="Research group activity photograph placeholder"><span aria-hidden="true">▧</span><strong>Research group at work</strong><small>Image coming soon</small></div>
+        
+          <!-- Research group photograph -->
+          <figure class="portfolio-photo">
+            <img
+              src="/files/images/research-group-1.jpeg"
+              alt="Research group photograph"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Research group photograph</figcaption>
+          </figure>
+        
+          <!-- Research group at work -->
+          <figure class="portfolio-photo">
+            <img
+              src="/files/images/research-group-2.jpeg"
+              alt="Research group at work"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Research group at work</figcaption>
+          </figure>
+        
         </div>
+
       </section>
       <article class="card markdown-body">{{ with $journey }}{{ .Content }}{{ end }}</article>
     </div>
