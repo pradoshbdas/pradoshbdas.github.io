@@ -6,7 +6,11 @@
       <div class="about-intro">
         <div class="about-copy">
           <h2>{{ $about.title }}</h2>
-          {{ range $about.paragraphs }}<p class="muted">{{ . }}</p>{{ end }}
+          
+          {{ range $about.paragraphs }}
+            <p class="muted">{{ . | markdownify }}</p>
+          {{ end }}
+
         </div>
 
         
