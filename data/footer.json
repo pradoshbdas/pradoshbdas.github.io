@@ -10,16 +10,16 @@
         "href": "https://www.facebook.com/pradoshbarun.das.37/",
         "icon_class": "fa-brands fa-facebook-f"
       },
-      {
-        "label": "X",
-        "href": "https://x.com/yourusername",
-        "icon_class": "fa-brands fa-x-twitter"
-      },
-      {
-        "label": "Reddit",
-        "href": "https://reddit.com/user/yourusername",
-        "icon_class": "fa-brands fa-reddit-alien"
-      }
+     {
+       "label": "Gmail",
+       "href": "mailto:pbdrohan@gmail.com",
+       "icon_class": "fa-solid fa-envelope"
+     },
+     {
+       "label": "Outlook",
+       "href": "mailto:pradoshbarun.das@mq.edu.au",
+       "icon_class": "fa-brands fa-microsoft"
+     }
     ],
     "copyright": "© 2026 Pradosh Barun Das"
   }
