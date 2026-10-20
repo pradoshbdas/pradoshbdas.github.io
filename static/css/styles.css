@@ -3576,3 +3576,30 @@ body::before {
   }
 
 }
+
+
+
+/* Biography external links */
+
+#about .about-copy p a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+
+/* External-link arrow */
+#about .about-copy p a::after {
+  content: "↗";
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+/* Hover effect */
+#about .about-copy p a:hover {
+  text-decoration-thickness: 2px;
+}
