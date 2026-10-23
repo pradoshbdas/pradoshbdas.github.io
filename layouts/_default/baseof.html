@@ -27,14 +27,18 @@
   <link rel="stylesheet" href="/css/page-transitions.css" />
 </head>
 <body class="loading">
-  <!-- BACKGROUND VIDEO/GIF -->
-  <div id="bg-media">
-    <video autoplay muted loop playsinline>
-      <source src="/background.mp4" type="video/mp4">
-      <!-- fallback for GIF: -->
-      <!-- <img src="/files/images/background.gif" alt=""> -->
-    </video>
-  </div>
+ <!-- Optimized animated background on all pages -->
+<div id="bg-media" aria-hidden="true">
+  <video
+    id="background-video"
+    muted
+    loop
+    playsinline
+    preload="none"
+    tabindex="-1">
+  </video>
+</div>
+</div>
   {{ if .IsHome }}{{ partial "loader.html" . }}{{ end }}
   {{ block "body" . }}{{ end }}
   {{ partial "scripts.html" . }}
