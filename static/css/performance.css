@@ -1,0 +1,17 @@
+/* Motion is optional: preserve the astronomy aesthetic without forcing video decoding. */
+/* The still poster uses the same subtle opacity as the original moving background. */
+#bg-media::before {
+  content: ''; position: absolute; inset: 0;
+  background: url('/files/images/background-video-poster.webp') center / cover no-repeat;
+  opacity: .20; pointer-events: none;
+}
+#bg-media video { position: relative; z-index: 1; opacity: .2; }
+html.background-video-playing #bg-media::before { opacity: 0; }
+@media (max-width: 980px), (prefers-reduced-motion: reduce) {
+  #bg-media video { display: none !important; }
+  .nav, .card, .section-shell, .about-summary-card, .featured-paper,
+  .timeline-content, .portfolio-photo, .mobile-menu, .site-footer {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
