@@ -77,13 +77,13 @@
       "heading": "Published Data Catalogues",
       "items": [
         {
-          "title": "Gaia RVS stellar labels using The Cannon",
-          "authors": "Das, P. B. et al. (2025)",
-          "journal": "CDS/VizieR Catalogue, J/MNRAS/538/605",
+          "title": "Gaia RVS neutron-capture abundances and GSE chemodynamics",
+          "authors": "Das, P. B. et al. (2026)",
+          "journal": "CDS/VizieR Catalogue, J/MNRAS/550/G1142",
           "links": [
             {
               "label": "Catalogue",
-              "href": "https://vizier.cds.unistra.fr/viz-bin/cat/J/MNRAS/538/605"
+              "href": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/MNRAS/550/G1142"
             }
           ]
         },
@@ -95,6 +95,17 @@
             {
               "label": "Catalogue",
               "href": "https://vizier.cds.unistra.fr/viz-bin/cat/J/A+A/713/A148"
+            }
+          ]
+        },
+        {
+          "title": "Gaia RVS stellar labels using The Cannon",
+          "authors": "Das, P. B. et al. (2025)",
+          "journal": "CDS/VizieR Catalogue, J/MNRAS/538/605",
+          "links": [
+            {
+              "label": "Catalogue",
+              "href": "https://vizier.cds.unistra.fr/viz-bin/cat/J/MNRAS/538/605"
             }
           ]
         }
