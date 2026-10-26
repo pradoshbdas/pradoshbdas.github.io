@@ -27,8 +27,8 @@
   border-radius: 12px;
 }
 
-<!-@media (min-width: 701px) {
+/* @media (min-width: 701px) {
   .portfolio-photo-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-}-->
+} */
