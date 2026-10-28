@@ -32,3 +32,4 @@
 @media(max-width:900px){.explorer-grid,.recognition-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recognition-featured-grid .recognition-feature:last-child{grid-column:1/-1}}
 @media(max-width:580px){.explorer-grid,.recognition-featured-grid{grid-template-columns:1fr}.recognition-featured-grid .recognition-feature:last-child{grid-column:auto}.explorer-heading,.recognition-browser-title{align-items:start;flex-direction:column}.engagement-card{min-height:145px}.recognition-row{grid-template-columns:68px minmax(0,1fr);gap:.65rem}}
 @media(prefers-reduced-motion:reduce){.engagement-card,.explorer-filter{transition:none}}
+.recognition-browser--standalone{margin-top:0;padding-top:0;border-top:0}
