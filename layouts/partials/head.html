@@ -2,20 +2,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}" />
-<link rel="preload" as="image" href="/files/images/profile.webp" fetchpriority="high">
-<link rel="preload" as="image" href="/files/images/background.webp">
-<link rel="stylesheet" href="/css/styles.css" />
-<link rel="stylesheet" href="/css/nav.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
 
-<link rel="stylesheet" href="/css/explorer.css" />
+{{ if .IsHome }}
+<link rel="preload" as="image" href="{{ .Site.Data.hero.portrait.src | relURL }}" fetchpriority="high" />
+{{ end }}
 
-<link rel="stylesheet" href="/css/pages.css" />
+{{ if eq .Section "research" }}
+  {{/* Research-only bundle. Keep the exact original stylesheet order. */}}
+  {{/* CSS currently lives in static/css, so readFile makes it available to Hugo Pipes without moving files. */}}
+  {{ $researchFiles := slice
+    "static/css/styles.css"
+    "static/css/nav.css"
+    "static/css/pages.css"
+    "static/css/featured-research.css"
+    "static/css/section-palettes.css"
+    "static/css/performance.css"
+  }}
+  {{ $combinedCSS := "" }}
+  {{ range $researchFiles }}
+    {{ $combinedCSS = printf "%s\n%s\n" $combinedCSS (readFile .) }}
+  {{ end }}
+  {{ $researchCSS := resources.FromString "css/research-bundle.css" $combinedCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $researchCSS.RelPermalink }}" integrity="{{ $researchCSS.Data.Integrity }}" crossorigin="anonymous" />
+{{ else }}
+  <link rel="stylesheet" href="/css/styles.css" />
+  <link rel="stylesheet" href="/css/nav.css" />
+{{ end }}
 
-<link rel="stylesheet" href="/css/featured-research.css" />
+<!-- Icon libraries are noncritical: fetch without blocking text/portrait painting. -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" media="print" onload="this.media='all'" />
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
+</noscript>
 
-<link rel="stylesheet" href="/css/section-palettes.css" />
-
-<link rel="stylesheet" href="/css/portfolio-photos.css" />
-<link rel="stylesheet" href="/css/performance.css" />
+{{ if ne .Section "research" }}
+  {{ if or (eq .Section "conferences") (eq .Section "awards") }}
+  <link rel="stylesheet" href="/css/explorer.css" />
+  {{ end }}
+  {{ if not .IsHome }}
+  <link rel="stylesheet" href="/css/pages.css" />
+  {{ end }}
+  {{ if not .IsHome }}
+  <link rel="stylesheet" href="/css/section-palettes.css" />
+  {{ end }}
+  {{ if or (eq .Section "about") (eq .Section "outreach") (eq .Section "gallery") }}
+  <link rel="stylesheet" href="/css/portfolio-photos.css" />
+  {{ end }}
+  <link rel="stylesheet" href="/css/performance.css" />
+{{ end }}

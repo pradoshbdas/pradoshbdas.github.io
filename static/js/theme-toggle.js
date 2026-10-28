@@ -26,15 +26,15 @@ function initThemeToggle() {
     if (macquarieLogo) {
       macquarieLogo.src =
         theme === "dark"
-          ? "/macquarie-light.png"
-          : "/macquarie-dark.png";
+          ? "/macquarie-light.webp"
+          : "/macquarie-dark.webp";
     }
 
     if (esoLogo) {
       esoLogo.src =
         theme === "dark"
-          ? "/eso-light.png"
-          : "/eso-dark.png";
+          ? "/eso-light.webp"
+          : "/eso-dark.webp";
     }
   }
 

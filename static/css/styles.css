@@ -3603,3 +3603,8 @@ body::before {
 #about .about-copy p a:hover {
   text-decoration-thickness: 2px;
 }
+
+/* Reserve space for the rotating astronomy facts */
+.hero-fact {
+  min-height: 4.8em;
+}

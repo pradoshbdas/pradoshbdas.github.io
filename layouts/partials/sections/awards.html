@@ -3,15 +3,9 @@
   <div class="container"><div class="section-shell">
     <div class="section-head"><h2>{{ $awards.title }}</h2><p>{{ $awards.intro }}</p></div>
     <div class="recognition-shell card">
-      <div class="explorer-heading"><div><span class="explorer-eyebrow">SELECTED DISTINCTIONS</span><h3>{{ $awards.featured_title }}</h3></div><span class="recognition-star" aria-hidden="true">✦</span></div>
-      <div class="recognition-featured-grid">
-        {{ range $awards.featured }}<article class="recognition-feature">
-          <div class="recognition-feature-top"><span class="recognition-chip">{{ .chip }}</span><span>{{ .year }}</span></div>
-          <h3>{{ .title }}</h3><p class="recognition-org">{{ .org }}</p><p class="recognition-desc">{{ .desc }}</p>
-        </article>{{ end }}
-      </div>
-      <div class="recognition-browser" data-awards-explorer>
-        <div class="recognition-browser-title"><div><span class="explorer-eyebrow">THE FULL PICTURE</span><h3>More achievements</h3></div><p>Browse by distinction, without the endless timeline.</p></div>
+      
+      <div class="recognition-browser recognition-browser--standalone" data-awards-explorer>
+        <div class="recognition-browser-title"><div><span class="explorer-eyebrow">Opportunities & Recognition</span><h3>Additional Scholarships & Distinctions</h3></div><p></p></div>
         <div class="explorer-toolbar" role="group" aria-label="Filter awards by category">
           <button class="explorer-filter is-active" type="button" data-award-filter="grants" aria-pressed="true">Grants & recognition</button>
           <button class="explorer-filter" type="button" data-award-filter="fellowships" aria-pressed="false">Fellowships &amp; Scholarships</button>
@@ -19,13 +13,12 @@
         </div>
         <div class="recognition-list" aria-live="polite">
           {{ range $awards.timeline }}{{ $year := .year }}{{ range .items }}
-          {{ $featured := false }}{{ $title := .title }}{{ range $awards.featured }}{{ if eq .title $title }}{{ $featured = true }}{{ end }}{{ end }}
-          {{ if not $featured }}
+          
           {{ $category := "grants" }}
           {{ if eq .chip "Fellowship" }}{{ $category = "fellowships" }}{{ else if or (eq .chip "Scholarship") (eq .chip "Academic Selection") }}{{ $category = "fellowships" }}{{ end }}
           <article class="recognition-row" data-award-category="{{ $category }}" {{ if ne $category "grants" }}hidden{{ end }}>
             <div class="recognition-row-year">{{ $year }}</div><div class="recognition-row-body"><span class="recognition-row-type">{{ .chip }}</span><h4>{{ .title }}</h4><p>{{ .org }}</p><p class="recognition-row-detail">{{ .desc }}</p></div>
-          </article>{{ end }}{{ end }}{{ end }}
+          </article>{{ end }}{{ end }}
           {{ range $awards.olympiads }}<article class="recognition-row" data-award-category="olympiads" hidden>
             <div class="recognition-row-year">{{ .year }}</div><div class="recognition-row-body"><span class="recognition-row-type">{{ .chip }}</span><h4>{{ .title }}</h4><p class="recognition-row-detail">{{ .desc }}</p></div>
           </article>{{ end }}

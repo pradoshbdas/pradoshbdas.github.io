@@ -95,19 +95,19 @@
    THEME-BASED LOGO SWITCHING
 ================================ */
 .institution-logo.macquarie {
-  content: url("/macquarie-dark.png");
+  content: url("/macquarie-dark.webp");
 }
 
 .institution-logo.eso {
-  content: url("/eso-dark.png");
+  content: url("/eso-dark.webp");
 }
 
 html[data-theme="dark"] .institution-logo.macquarie {
-  content: url("/macquarie-light.png");
+  content: url("/macquarie-light.webp");
 }
 
 html[data-theme="dark"] .institution-logo.eso {
-  content: url("/eso-light.png");
+  content: url("/eso-light.webp");
 }
 
 /* ================================
