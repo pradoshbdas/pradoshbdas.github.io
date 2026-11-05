@@ -33,17 +33,7 @@
     </div>
 
     <div class="nav-right">
-      <a
-        href="https://ui.adsabs.harvard.edu/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="nasa-ads-btn"
-        aria-label="NASA ADS"
-      >
-        {{ partial "icons/nasa-ads.html" . }}
-        <span class="nasa-ads-label">NASA ADS</span>
-      </a>
-
+      
       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
         <span class="theme-toggle-icon"></span>
       </button>
@@ -70,17 +60,4 @@
       <a href="{{ .href | relURL }}" {{ if eq (trim .href "/") (trim $.RelPermalink "/") }}aria-current="page"{{ end }}>{{ .label }}</a>
     {{ end }}
   </nav>
-
-  <div class="mobile-menu-actions">
-    <a
-      href="https://ui.adsabs.harvard.edu/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="nasa-ads-btn mobile-nasa"
-      aria-label="NASA ADS"
-    >
-      {{ partial "icons/nasa-ads.html" . }}
-      <span class="nasa-ads-label">NASA ADS</span>
-    </a>
-  </div>
 </aside>

@@ -3,7 +3,6 @@
   <div class="container"><div class="section-shell">
     <div class="section-head"><h2>{{ $conferences.title }}</h2><p>{{ $conferences.intro }}</p></div>
     <div class="portfolio-explorer card" data-conference-explorer>
-      <div class="explorer-heading"><div><span class="explorer-eyebrow">ACADEMIC ENGAGEMENTS</span><h3>Ideas shared around the world</h3></div><span class="explorer-count">{{ $conferenceCount := 0 }}{{ range $conferences.years }}{{ $conferenceCount = add $conferenceCount (len .items) }}{{ end }}{{ $conferenceCount }} engagements</span></div>
       <div class="explorer-toolbar" role="group" aria-label="Filter conferences by year">
         <button class="explorer-filter is-active" type="button" data-conference-filter="all" aria-pressed="true">All years</button>
         {{ range $conferences.years }}<button class="explorer-filter" type="button" data-conference-filter="{{ .year }}" aria-pressed="false">{{ .year }}</button>{{ end }}

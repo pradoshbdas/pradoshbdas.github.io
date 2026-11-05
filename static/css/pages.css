@@ -51,3 +51,28 @@ html[data-theme="light"][data-portfolio-page="about"]
   border-left: 3px solid #17658e;
   padding-left: 16px;
 }
+
+
+/* Research: consistent window scrolling and sticky navbar */
+html[data-portfolio-page="research"] {
+  height: auto;
+  overflow-y: auto;
+  scroll-padding-top: 0;
+}
+
+html[data-portfolio-page="research"] body {
+  height: auto;
+  overflow: visible !important;
+}
+
+html[data-portfolio-page="research"] main.portfolio-inner-page {
+  height: auto;
+  min-height: calc(100dvh - var(--nav-height));
+  overflow: visible;
+  overscroll-behavior-y: auto;
+}
+
+/* Align awards section directly below the navbar */
+html[data-portfolio-page="research"] #awards {
+  scroll-margin-top: calc(var(--nav-height) + 12px);
+}

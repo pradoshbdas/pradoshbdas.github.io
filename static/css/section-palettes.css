@@ -40,3 +40,42 @@ html[data-theme="light"][data-portfolio-page="contact"] .section-head h2{color:v
 html[data-portfolio-page="publications"] .card,
 html[data-portfolio-page="gallery"] .card,
 html[data-portfolio-page="contact"] .card{border-color:rgba(var(--page-rgb),.4);background:linear-gradient(135deg,rgba(var(--page-rgb),.12),rgba(var(--page-rgb),.025))}
+/* RESEARCH-EMBEDDED AWARDS: KEEP THE ORIGINAL GOLD PALETTE */
+/* The Research page remains teal; only its nested #awards section uses gold. */
+html[data-portfolio-page="research"] #awards {
+  --page-rgb:231,181,83;--page-accent:#f4cb76;--page-ink:#8f5c0c;--page-tint:#fff4d8;
+  --accent: var(--page-accent);
+  --accent-soft: rgba(var(--page-rgb), .16);
+}
+html[data-theme="light"][data-portfolio-page="research"] #awards {
+  --accent: var(--page-ink);
+  --accent-soft: var(--page-tint);
+}
+/* The original Awards page applies these accents at document level.
+   Re-apply the same rules inside the embedded section. */
+html[data-portfolio-page="research"] #awards .explorer-filter.is-active {
+  background: var(--page-accent);
+  border-color: var(--page-accent);
+  color: #151923;
+}
+html[data-portfolio-page="research"] #awards .recognition-chip,
+html[data-portfolio-page="research"] #awards .recognition-row-type {
+  color: var(--page-accent);
+}
+html[data-theme="light"][data-portfolio-page="research"] #awards .recognition-chip,
+html[data-theme="light"][data-portfolio-page="research"] #awards .recognition-row-type {
+  color: var(--page-ink);
+}
+html[data-portfolio-page="research"] #awards .recognition-feature {
+  border-color: rgba(var(--page-rgb), .40);
+  background: linear-gradient(140deg, rgba(var(--page-rgb), .17), rgba(var(--page-rgb), .035));
+}
+/* Subtle gold-toned surroundings instead of Research's teal card accents. */
+html[data-portfolio-page="research"] #awards .recognition-shell {
+  border-color: rgba(var(--page-rgb), .30);
+  background: linear-gradient(135deg, rgba(var(--page-rgb), .085), rgba(var(--page-rgb), .018));
+}
+html[data-portfolio-page="research"] #awards .recognition-list,
+html[data-portfolio-page="research"] #awards .recognition-row {
+  border-color: rgba(var(--page-rgb), .25);
+}
