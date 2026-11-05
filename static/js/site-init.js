@@ -47,6 +47,13 @@ function initMobileMenu() {
   closeBtn.addEventListener("click", () => {
     document.body.classList.remove("mobile-menu-open");
   });
+  // Close the mobile panel after navigation, including in-page anchors.
+  if (menu) {
+    menu.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', () => document.body.classList.remove('mobile-menu-open'));
+    });
+  }
+
 }
 
 window.initMobileMenu = initMobileMenu;
