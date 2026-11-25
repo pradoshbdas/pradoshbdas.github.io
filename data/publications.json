@@ -1,9 +1,8 @@
 {
-    "title":  "Publications/Manuscripts",
-    "subtitle":  "Published papers, catalogues, and research reports",
+    "title":  "Publications",
     "groups":  [
                    {
-                       "heading":  "Publications \u0026 Research Reports",
+                       "heading":  "Publications \u0026 Research Reports (Selected)",
                        "items":  [
                                      {
                                          "title":  "Barium and europium abundances from the Gaia-ESO Survey using The Cannon",
